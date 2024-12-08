@@ -13,8 +13,9 @@ const Projects = () => {
     console.log(scrollY);
   }, [isInView]);
 
-  function flag (isInView, scrollY){
-    if (isInView == true){
+  function flag (isInView){
+    
+    if (isInView == false){
       return -100;
     }else{
       return 100;
@@ -30,7 +31,7 @@ const Projects = () => {
           <div key={index} className="mb-4 flex flex-wrap lg:justify-center">
             <motion.div
               whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: flag }}
+              initial={{ opacity: 0, y: flag(isInView) }}
               transition={{ duration: 0.5 }}
               className="w-full lg:w-1/4"
             >
@@ -44,7 +45,7 @@ const Projects = () => {
             </motion.div>
             <motion.div
               whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: flag }}
+              initial={{ opacity: 0, y: flag(isInView) }}
               transition={{ duration: 0.5 }}
               className="w-full max-w-xl lg:w-3/4"
             >

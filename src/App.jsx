@@ -6,7 +6,6 @@ import Technologies from "./components/Technologies";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import Footnotes from "./components/Footnotes";
 
 const App = () => {
   return (
@@ -25,7 +24,6 @@ const App = () => {
         <Experience/>
         <Projects/>
         <Contact/>
-        <Footnotes/>
       </div> 
     </div>
   );

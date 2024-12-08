@@ -29,6 +29,17 @@ export const EXPERIENCES = [
       Collaborated with stakeholders to define project requirements and timelines.`,
     technologies: ["Typescript", "Angular", "SAS", "Spring Boot", "MySQL", "Java"],
   },
+  {
+    year: "Jun 2021 - Dec 2021",
+    role: "AR Research Role",
+    company: "University of Texas at San Antonio",
+    description: `Undergraduate research role opportunity focusing on the behavior of objects created through
+      augmented reality applications. Built a game that has the user(s) go through anaugmented reality maze.
+      Project was made using Unity game engine and scripted in C# to create augmented reality
+      objects for players to walk between in-game walls shown through a mobile device. Lobby was made utilizing 
+      Photon Unity Network to construct allowing multiple players to explore the maze.`,
+    technologies: ["C#", "Unity", "Photon Unity Network"],
+  },
 ];
 
 export const PROJECTS = [
@@ -40,18 +51,11 @@ export const PROJECTS = [
     technologies: ["HTML", "CSS", "Angular", "Node.js", "MySQL", "Spring Boot"],
   },
   {
-    title: "Task Management App",
-    image: project2,
-    description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
-  },
-  {
     title: "Portfolio Website",
     image: project3,
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
+    technologies: ["HTML", "React.js", "Tailwind CSS", "EmailJS"],
   },
 ];
 
