@@ -15,11 +15,12 @@ const Technologies = () => {
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
+          viewport={{ once: true }}
           transition={{
             duration: 1.0,
             delay: 0.5,
             ease: "linear",
-            type: "spring",
+            type: "spring"
           }}
           className="rounded-2xl border-4 border-neutral-800 p-4"
         >
@@ -28,11 +29,12 @@ const Technologies = () => {
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
+          viewport={{ once: true }}
           transition={{
             duration: 1.0,
             delay: 0.8,
             ease: "linear",
-            type: "spring",
+            type: "spring"
           }}
           className="rounded-2xl border-4 border-neutral-800 p-4"
         >
@@ -41,11 +43,12 @@ const Technologies = () => {
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
+          viewport={{ once: true }}
           transition={{
             duration: 1.0,
             delay: 1.2,
             ease: "linear",
-            type: "spring",
+            type: "spring"
           }}
           className="rounded-2xl border-4 border-neutral-800 p-4"
         >
@@ -54,11 +57,12 @@ const Technologies = () => {
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
+          viewport={{ once: true }}
           transition={{
             duration: 1.0,
             delay: 1.6,
             ease: "linear",
-            type: "spring",
+            type: "spring"
           }}
           className="rounded-2xl border-4 border-neutral-800 p-4"
         >
@@ -67,6 +71,7 @@ const Technologies = () => {
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
+          viewport={{ once: true }}
           transition={{
             duration: 1.0,
             delay: 2.0,
@@ -80,11 +85,13 @@ const Technologies = () => {
         <motion.div
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
+          viewport={{ once: true }}
           transition={{
             duration: 1.0,
             delay: 2.4,
             ease: "linear",
             type: "spring",
+            
           }}
           className="rounded-2xl border-4 border-neutral-800 p-4"
         >
