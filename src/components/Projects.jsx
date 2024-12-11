@@ -3,35 +3,38 @@ import { PROJECTS } from "../constants";
 import { motion, useInView, useScroll, useSpring, useTransform } from "framer-motion";
 
 const Projects = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref);
+  const topRef = useRef(null);
+  const bottomRef = useRef(null);
+  const onTop = useInView(topRef);
+  const onBottom = useInView(bottomRef);
 
-  const { scrollY } = useScroll();
 
   useEffect(() => {
-    console.log(isInView);
-    console.log(scrollY);
-  }, [isInView]);
+    console.log("Top: " + onTop);
+    console.log("Bottom: " + onBottom);
+  }, [onTop,onBottom]);
 
-  function flag (isInView){
+  function flag (onTop, onBottom){
     
-    if (isInView == false){
+    if (onBottom == true){
       return -100;
-    }else{
+    }else if (onTop == true){
       return 100;
     }
   }
   
 
+
   return (
     <div className="border-b border-neutral-900 pb-4">
+      <div ref={topRef}/>
       <h2 className="my-20 text-center text-4xl text-white">Projects</h2>
-      <div ref={ref}>
+      
         {PROJECTS.map((project, index) => (
           <div key={index} className="mb-4 flex flex-wrap lg:justify-center">
             <motion.div
               whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: flag(isInView) }}
+              initial={{ opacity: 0, y: flag(onTop, onBottom) }}
               transition={{ duration: 0.5 }}
               className="w-full lg:w-1/4"
             >
@@ -45,7 +48,7 @@ const Projects = () => {
             </motion.div>
             <motion.div
               whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: flag(isInView) }}
+              initial={{ opacity: 0, y: flag(onTop, onBottom) }}
               transition={{ duration: 0.5 }}
               className="w-full max-w-xl lg:w-3/4"
             >
@@ -62,7 +65,7 @@ const Projects = () => {
             </motion.div>
           </div>
         ))}
-      </div>
+      <div ref={bottomRef}/>
     </div>
   );
 };
