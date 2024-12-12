@@ -59,10 +59,10 @@ export const PROJECTS = [
   },
   {
     title: "Salsa Website",
-    image: project3,
+    image: project2,
     description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "React.js", "Tailwind CSS", "EmailJS"],
+      "Website created to receive feedback and reviews for our family's salsa sold at peach stands in our local town.",
+    technologies: ["HTML", "React.js", "Bootstrap CSS", "EmailJS"],
   },
 
 ];

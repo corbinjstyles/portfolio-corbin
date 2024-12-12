@@ -22,8 +22,6 @@ const Projects = () => {
       return 100;
     }
   }
-  
-
 
   return (
     <div className="border-b border-neutral-900 pb-4">
