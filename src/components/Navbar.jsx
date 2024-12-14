@@ -7,7 +7,13 @@ import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
-    <nav className="rounded bg-blue-300 mb-20 flex items-center justify-between py-6">
+    <motion.nav
+      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, y: -100 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="rounded bg-blue-300 mb-20 flex items-center justify-between py-6"
+    >
       <div className="flex flex-shrink-0 items-center">
         <b className="mx-2 text-4xl bold">CS</b>
       </div>
@@ -28,7 +34,7 @@ const Navbar = () => {
           </button>
         </a> */}
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
