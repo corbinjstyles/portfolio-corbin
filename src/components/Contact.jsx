@@ -36,7 +36,7 @@ const Contact = () => {
   }, [formSubmitted]);
 
   return (
-    <div id="form-container" className="lg:p-5 font-Encode-Sans">
+    <div id="form-container" className="lg:p-5 font-Encode-Sans w-1/2">
       <div className="overflow-hidden">
         <motion.h3
           initial={{ y: "200%" }}
@@ -71,7 +71,7 @@ const Contact = () => {
             animate={{ opacity: 1 }}
           >
             <p className="text-center text-green-500 text-xl lg:mt-40 mt-20 mb-20 ">
-              Thank you for your message! We&apos;ll get back to you shortly!
+              Thank you for your message! I&apos;ll get back to you shortly!
             </p>
           </motion.div>
         ) : (
