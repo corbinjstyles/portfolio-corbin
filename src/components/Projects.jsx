@@ -27,7 +27,6 @@ const Projects = () => {
     <div className="border-b border-neutral-900 pb-4">
       <div ref={topRef}/>
       <h2 className="my-20 text-center text-4xl text-white">Projects</h2>
-      
         {PROJECTS.map((project, index) => (
           <div key={index} className="mb-4 flex flex-wrap lg:justify-center">
             <motion.div
