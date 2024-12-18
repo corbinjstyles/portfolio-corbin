@@ -159,18 +159,28 @@ const Contact = () => {
         </motion.div>
       </div>
       <div className="lg:p-4 w-full lg:w-1/2">
-        <div className="py-9">
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          transition={{ ease: [0.455, 0.03, 0.515, 0.955], delay:1, duration: 1 }}
+          animate={{ y: 0, opacity: 1 }}
+          className="py-9"
+        >
           <iframe
             width="100%"
             height="600"
             src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=UTSA+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
           />
-        </div>
-        <h2 className="py-3 text-white">
-          I am located near UTSA in the San Antonio metro area where I work. 
-          If you want to discuss business ideas or meet near it's vicinity
-          then feel free to shoot an email!
-        </h2>
+        </motion.div>
+        <motion.h2
+          initial={{ y: 100, opacity: 0 }}
+          transition={{ ease: [0.455, 0.03, 0.515, 0.955], delay: 1.5 ,duration: 1 }}
+          animate={{ y: 0, opacity: 1 }}
+          className="py-3 text-white"
+        >
+          I am located near UTSA in the San Antonio metro area where I work. If
+          you want to discuss business ideas or meet near it's vicinity then
+          feel free to shoot an email!
+        </motion.h2>
       </div>
     </div>
   );
