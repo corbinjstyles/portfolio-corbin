@@ -90,8 +90,7 @@ const Contact = () => {
                         name="name"
                         required="required"
                         placeholder="Name"
-                        className="
-                  appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none font-bold uppercase text-3xl"
+                        className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none font-bold uppercase text-3xl"
                       />
                     </label>
                   </div>
@@ -103,8 +102,7 @@ const Contact = () => {
                       placeholder="Email"
                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                       required="required"
-                      className="
-                appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none font-bold uppercase text-3xl"
+                      className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none font-bold uppercase text-3xl"
                     />
                   </label>
                   <label htmlFor="phone" className="block border-b">
@@ -114,8 +112,7 @@ const Contact = () => {
                       name="phone"
                       placeholder="Phone"
                       required="required"
-                      className="
-                appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none font-bold uppercase text-3xl"
+                      className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none font-bold uppercase text-3xl"
                     />
                   </label>
                   <label htmlFor="company" className="block border-b">
@@ -125,11 +122,9 @@ const Contact = () => {
                       type="text"
                       placeholder="Company"
                       required="required"
-                      className="
-                appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none font-bold uppercase text-3xl"
+                      className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none font-bold uppercase text-3xl"
                     />
                   </label>
-
                   <label className="block border-b">
                     <textarea
                       id="message"
@@ -137,8 +132,7 @@ const Contact = () => {
                       rows="5"
                       required="required"
                       placeholder="Tell us a little more about your cool project!"
-                      className="
-                appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none bg-cool-darker text-cool-beige text-2xl font-bold
+                      className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none bg-cool-darker text-cool-beige text-2xl font-bold
                   "
                     ></textarea>
                   </label>
@@ -161,7 +155,11 @@ const Contact = () => {
       <div className="lg:p-4 w-full lg:w-1/2">
         <motion.div
           initial={{ y: 100, opacity: 0 }}
-          transition={{ ease: [0.455, 0.03, 0.515, 0.955], delay:1, duration: 1 }}
+          transition={{
+            ease: [0.455, 0.03, 0.515, 0.955],
+            delay: 1,
+            duration: 1,
+          }}
           animate={{ y: 0, opacity: 1 }}
           className="py-9"
         >
@@ -173,7 +171,11 @@ const Contact = () => {
         </motion.div>
         <motion.h2
           initial={{ y: 100, opacity: 0 }}
-          transition={{ ease: [0.455, 0.03, 0.515, 0.955], delay: 1.5 ,duration: 1 }}
+          transition={{
+            ease: [0.455, 0.03, 0.515, 0.955],
+            delay: 1.5,
+            duration: 1,
+          }}
           animate={{ y: 0, opacity: 1 }}
           className="py-3 text-white"
         >
