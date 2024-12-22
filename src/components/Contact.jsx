@@ -36,7 +36,7 @@ const Contact = () => {
   }, [formSubmitted]);
 
   return (
-    <div className="flex flex-wrap">
+    <div id="contact" className="flex flex-wrap">
       <div
         id="form-container"
         className="lg:p-5 font-Encode-Sans w-full lg:w-1/2"
@@ -46,7 +46,7 @@ const Contact = () => {
             initial={{ y: "200%" }}
             transition={{ ease: [0.455, 0.03, 0.515, 0.955], duration: 1 }}
             animate={{ y: 0 }}
-            className="my-20 text-white text-center text-4xl"
+            className="my-10 text-white text-center text-4xl"
           >
             Contact Me!
           </motion.h3>
@@ -82,19 +82,29 @@ const Contact = () => {
             <form method="POST" action="" ref={form} onSubmit={sendEmail}>
               <div className="mx-auto rounded-xl max-w-xl">
                 <div className="grid grid-cols-1 gap-6 label">
-                  <div className="overflow-hidden">
-                    <label htmlFor="name" className="block border-b py-2 ">
+                  <div className="flex">
+                    <label htmlFor="firstName" className="">
                       <input
-                        id="name"
+                        id="firstName"
                         type="text"
-                        name="name"
+                        name="firstName"
                         required="required"
-                        placeholder="Name"
-                        className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none font-bold uppercase text-3xl"
+                        placeholder="First Name"
+                        className="w-full block rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                      />
+                    </label>
+                    <label htmlFor="lastName">
+                      <input
+                        id="lastName"
+                        type="text"
+                        name="lastName"
+                        required="required"
+                        placeholder="Last Name"
+                        className="w-full block rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                       />
                     </label>
                   </div>
-                  <label htmlFor="email" className="block border-b">
+                  <label htmlFor="email">
                     <input
                       id="email"
                       type="email"
@@ -102,38 +112,66 @@ const Contact = () => {
                       placeholder="Email"
                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                       required="required"
-                      className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none font-bold uppercase text-3xl"
+                      className="w-full block rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                     />
                   </label>
-                  <label htmlFor="phone" className="block border-b">
+
+                  <div>
+                    <div className="flex rounded-md bg-white outline outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
+                      <div className="grid shrink-0 grid-cols-1 focus-within:relative">
+                        <select
+                          id="country"
+                          name="country"
+                          autocomplete="country"
+                          aria-label="Country"
+                          className="col-start-1 row-start-1 w-full appearance-none rounded-md py-2 pl-3.5 pr-7 text-base text-gray-500 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                        >
+                          <option>US +1</option>
+                          <option>CA </option>
+                          <option>EU</option>
+                        </select>
+                        <svg
+                          className="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
+                          viewBox="0 0 16 16"
+                          fill="currentColor"
+                          aria-hidden="true"
+                          data-slot="icon"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                      <input
+                        type="text"
+                        name="phone"
+                        id="phone"
+                        className="block rounded-md min-w-0 grow py-1.5 pl-1 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6"
+                        placeholder="Phone Number (xxx-xxx-xxxx)"
+                      />
+                    </div>
+                  </div>
+
+                  <label htmlFor="subject">
                     <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      placeholder="Phone"
+                      type="subject"
+                      id="subject"
+                      name="subject"
+                      placeholder="Subject"
                       required="required"
-                      className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none font-bold uppercase text-3xl"
+                      className="w-full block rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                     />
                   </label>
-                  <label htmlFor="company" className="block border-b">
-                    <input
-                      id="company"
-                      name="company"
-                      type="text"
-                      placeholder="Company"
-                      required="required"
-                      className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none font-bold uppercase text-3xl"
-                    />
-                  </label>
-                  <label className="block border-b">
+                  <label>
                     <textarea
                       id="message"
                       name="message"
                       rows="5"
                       required="required"
-                      placeholder="Tell us a little more about your cool project!"
-                      className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none bg-cool-darker text-cool-beige text-2xl font-bold
-                  "
+                      placeholder="Message"
+                      className="w-full block rounded-md bg-white px-3.5  text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
                     ></textarea>
                   </label>
                   <div className="text-center">
@@ -165,7 +203,7 @@ const Contact = () => {
         >
           <iframe
             width="100%"
-            height="600"
+            height="437"
             src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=UTSA+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
           />
         </motion.div>
@@ -180,7 +218,7 @@ const Contact = () => {
           className="py-3 text-white"
         >
           I am located near UTSA in the San Antonio metro area where I work. If
-          you want to discuss business ideas or meet near it's vicinity then
+          you want to discuss business ideas or meet near it's vicinity, then
           feel free to shoot an email!
         </motion.h2>
       </div>
