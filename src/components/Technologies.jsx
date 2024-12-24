@@ -7,6 +7,8 @@ import { FaAngular } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 
+let delay = 0.5
+
 const technologies = [
   {
     name: "ReactJs",
