@@ -9,7 +9,6 @@ const Contact = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .sendForm("service_jif4ysc", "template_ft9zayd", form.current, {
         publicKey: "S48g12QrwD8eH_UHI",
@@ -130,19 +129,6 @@ const Contact = () => {
                           <option>CA </option>
                           <option>EU</option>
                         </select>
-                        <svg
-                          className="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4"
-                          viewBox="0 0 16 16"
-                          fill="currentColor"
-                          aria-hidden="true"
-                          data-slot="icon"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
                       </div>
                       <input
                         type="text"
@@ -150,6 +136,7 @@ const Contact = () => {
                         id="phone"
                         className="block rounded-md min-w-0 grow py-1.5 pl-1 pr-3 text-base text-gray-900 placeholder:text-gray-400 focus:outline focus:outline-0 sm:text-sm/6"
                         placeholder="Phone Number (xxx-xxx-xxxx)"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}$"
                       />
                     </div>
                   </div>

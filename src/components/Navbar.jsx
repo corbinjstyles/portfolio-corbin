@@ -12,12 +12,18 @@ const Navbar = () => {
       initial={{ opacity: 0, y: -100 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="rounded bg-blue-300 mb-20 flex items-center justify-between py-6"
+      className="rounded bg-blue-300 mb-10 flex items-center justify-between py-3"
     >
       <div className="flex flex-shrink-0 items-center">
-        <b className="mx-2 text-4xl bold">CS</b>
+        {/* <Sidebar/> */}
+        <b className="mx-4 text-4xl bold">CS</b>
       </div>
-      <div className="m-8 flex items-center justify-center gap-4 text-2xl">
+      <div className="m-10 flex items-center justify-center gap-4 text-2xl">
+        <a type="button">Home</a>
+        <a type="link">Home</a>
+        <a type="link">Home</a>
+        <a type="link">Home</a>
+        <a type="link">Home</a>
         <a type="button" href="https://www.linkedin.com/in/corbinstyles/">
           <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
             <FaLinkedin />

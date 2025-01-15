@@ -7,6 +7,7 @@ import Experience from "./components/Experience";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footnotes from "./components/Footnotes";
+import Sidebar from "./components/Sidebar";
 
 const App = () => {
   return (
@@ -19,14 +20,11 @@ const App = () => {
           bg-[size:20px_20px]"
         />
       </div>
+      <Navbar />
+      {/* <Sidebar /> */}
       <div className="container mx-auto px-8">
-        <Navbar />
-        <div className="grid">
-          <div className="grid-cols-4">
-            <Hero />
-            <About />
-          </div>
-        </div>
+        <Hero />
+        <About />
         <Technologies />
         <Experience />
         <Projects />

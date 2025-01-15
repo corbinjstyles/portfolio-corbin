@@ -42,10 +42,12 @@ const technologies = [
   },
 ];
 
+const TECH_DESC = `I have experience in Spring Boot, SAS, MySQL`
+
 const Technologies = () => {
   return (
     <div className="border-b border-neutral-800 pb-24">
-      <h2 className="my-20 text-center text-4xl text-white">Technologies</h2>
+      <h2 className="my-10 text-center text-4xl text-white">Technologies</h2>
       <motion.div className="flex flex-wrap items-center justify-center gap-4">
         {technologies.map((tech, index) => (
           <motion.div
@@ -69,6 +71,10 @@ const Technologies = () => {
           </motion.div>
         ))}
       </motion.div>
+      {/* <p className="text-white my-20">{TECH_DESC}</p>
+      <ul>
+        <li className="text-white">React</li>
+      </ul> */}
     </div>
   );
 };
