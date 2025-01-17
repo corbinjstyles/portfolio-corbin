@@ -13,6 +13,8 @@ import {
 } from "react-scroll";
 import { motion } from "framer-motion";
 
+const name = "Corbin Styles";
+
 const Navbar = () => {
   return (
     <motion.nav
@@ -34,31 +36,36 @@ const Navbar = () => {
           CS
         </motion.b>
       </div>
+      <div className="text-6xl font-bold bg-gradient-to-r from-orange-700 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient">
+        <motion.p >
+          Corbin Styles
+        </motion.p>
+      </div>
       <div className="m-10 flex items-center justify-center gap-4 text-2xl">
         <Link to="about-section" spy={true} smooth={true} duration={500}>
           <motion.button
             type="button"
             className="hover:text-black-400 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-black after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]"
-            whileHover={{ scale: .9 }}
+            whileHover={{ scale: 0.9 }}
           >
             About
           </motion.button>
         </Link>
         <Link to="ex-section" spy={true} smooth={true} duration={500}>
-        <motion.button
+          <motion.button
             type="button"
             className="hover:text-black-400 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-black after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]"
-            whileHover={{ scale: .9 }}
+            whileHover={{ scale: 0.9 }}
           >
             Experience
           </motion.button>
         </Link>
 
         <Link to="contact" spy={true} smooth={true} duration={500}>
-        <motion.button
+          <motion.button
             type="button"
             className="hover:text-black-400 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-700 before:absolute before:bg-black before:origin-center before:h-[1px] before:w-0 hover:before:w-[50%] before:bottom-0 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-black after:origin-center after:h-[1px] after:w-0 hover:after:w-[50%] after:bottom-0 after:right-[50%]"
-            whileHover={{ scale: .9 }}
+            whileHover={{ scale: 0.9 }}
           >
             Contact
           </motion.button>

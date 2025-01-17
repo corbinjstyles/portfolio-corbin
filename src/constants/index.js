@@ -2,20 +2,17 @@ import project1 from "../assets/projects/ecommerce.png";
 import project2 from "../assets/projects/salsa.jpg";
 import project3 from "../assets/projects/portfolio.avif";
 
-export const HERO_CONTENT = `I am a software developer driven to provide cutting edge technologies. With 5 years of hands-on experience, 
-  I have honed my skills in front-end technologies like React and Tailwind, 
-  as well as back-end technologies like MySQL, Spring Boot, and MongoDB. 
-  My goal is to leverage my expertise to create innovative solutions that drive business 
-  growth and deliver exceptional user experiences.`;
+export const HERO_CONTENT = `I am a software developer with about 3 years of hands-on experience.
+  I've worked with many people in the past both in school and in the marketplace and have continued to learn more 
+  about the industry while networking with others. Each project I've worked on has always taught me something new
+  and continues to build more and more excitement that revolves around it! `;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with 
-  a passion for creating efficient and user-friendly web applications. 
-  With 5 years of professional experience, I have worked with a variety of technologies, 
-  including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. 
-  My journey in web development began with a deep curiosity for how things work, 
-  and it has evolved into a career where I continuously strive to learn and adapt to new challenges. 
-  I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. 
-  Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = ` With 3 years of professional experience, I have worked with a variety of technologies, 
+  including ReactJS, MySQL, Spring Boot, AngularTS, and MongoDB. I started growing an interest with web development 
+  and software engineering when I worked on a fresher project with HCL with a few people. It gave me a hunger
+  for technical work in hopes to providing cutting edge solutions that leverage business growth. 
+  Outside of work, I enjoy running/going to the gym, being an avid and competitive gamer on every game
+  I play, watching sports, and hanging with friends.`;
 
 export const EXPERIENCES = [
   {
