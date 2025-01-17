@@ -64,8 +64,7 @@ const technologies = [
   },
 ];
 
-const TECH_DESC = `I have experience in the following technologies. Continuously looking to 
-  add more build up more and more technologies`;
+const TECH_DESC = `More to add later!`;
 
 const Technologies = () => {
   return (

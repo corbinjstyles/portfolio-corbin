@@ -1,6 +1,6 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
+import project1 from "../assets/projects/ecommerce.png";
+import project2 from "../assets/projects/salsa.jpg";
+import project3 from "../assets/projects/portfolio.avif";
 
 export const HERO_CONTENT = `I am a software developer driven to provide cutting edge technologies. With 5 years of hands-on experience, 
   I have honed my skills in front-end technologies like React and Tailwind, 
@@ -23,7 +23,8 @@ export const EXPERIENCES = [
     role: "IT Consultant",
     company: "HCLTech",
     description: `Provided solutions through
-      consulting services for client-based needs to meet specific business requirements.`,
+      consulting services for client-based needs to meet specific business requirements. 
+      Partnered with multiple teams for different clients reducing the bandwidth and and workload for each project.`,
     technologies: ["Typescript", "Angular", "SAS", "Spring Boot", "MySQL", "Java"],
   },
   {
@@ -31,11 +32,17 @@ export const EXPERIENCES = [
     role: "AR Research Role",
     company: "University of Texas at San Antonio",
     description: `Undergraduate research role opportunity focusing on the behavior of objects created through
-      augmented reality applications. Built a game that has the user(s) go through anaugmented reality maze.
-      Project was made using Unity game engine and scripted in C# to create augmented reality
-      objects for players to walk between in-game walls shown through a mobile device. Lobby was made utilizing 
-      Photon Unity Network to construct allowing multiple players to explore the maze.`,
+      augmented reality applications. Built a game that has the user(s) go through an augmented reality maze.
+      `,
     technologies: ["C#", "Unity", "Photon Unity Network"],
+  },
+  {
+    year: "Aug 2017 - Dec 2021",
+    role: "Student",
+    company: "University of Texas at San Antonio",
+    description: `Completed coursework curriculum to obtain my Bachelor's of Science in Computer Science at UTSA. 
+      `,
+    technologies: ["Data Structures", "C", "Python", "Java"],
   },
 ];
 
@@ -52,14 +59,14 @@ export const PROJECTS = [
     image: project3,
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "React.js", "Tailwind CSS", "EmailJS"],
+    technologies: ["HTML", "React.js", "Tailwind CSS", "EmailJS", "Framer Motion"],
   },
   {
     title: "Salsa Website",
     image: project2,
     description:
       "Website created to receive feedback and reviews for our family's salsa sold at peach stands in our hometown.",
-    technologies: ["HTML", "React.js", "Bootstrap CSS", "EmailJS"],
+    technologies: ["HTML", "React.js", "Bootstrap CSS", "EmailJS", "AWS", "SQL"],
   },
 ];
 
