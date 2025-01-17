@@ -3,6 +3,14 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { BrowserRouter, NavLink } from "react-router-dom";
+import {
+  Link,
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+} from "react-scroll";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
@@ -12,16 +20,31 @@ const Navbar = () => {
       initial={{ opacity: 0, y: -100 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="rounded bg-blue-300 mb-10 flex items-center justify-between py-3"
+      className="rounded bg-blue-300 mb-5 flex mx-20 mt-12 items-center justify-between py-1"
     >
       <div className="flex flex-shrink-0 items-center">
         {/* <Sidebar/> */}
-        <b className="mx-4 text-4xl bold">CS</b>
+        <motion.b
+          initial={{ opacity: 0, rotate: -270 }}
+          whileInView={{ opacity: 1, rotate: 0 }}
+          transition={{ duration: 0.5 }}
+          whileTap={{rotate:360, duration:.1}}
+          className="mx-4 text-4xl bold"
+        >
+          CS
+        </motion.b>
       </div>
       <div className="m-10 flex items-center justify-center gap-4 text-2xl">
-        <a type="button">Home</a>
-        <a type="link">Home</a>
-        <a type="link">Home</a>
+        <Link to="about-section" spy={true} smooth={true} duration={500}>
+          <button type="button">About</button>
+        </Link>
+        <Link to="tech-section" spy={true} smooth={true} duration={500}>
+          <button type="link">Technologies</button>
+        </Link>
+        <Link to="tech-section" spy={true} smooth={true} duration={500}>
+          <button type="link">Technologies</button>
+        </Link>
+
         <a type="link">Home</a>
         <a type="link">Home</a>
         <a type="button" href="https://www.linkedin.com/in/corbinstyles/">

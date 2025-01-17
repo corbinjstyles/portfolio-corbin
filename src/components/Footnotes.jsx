@@ -5,7 +5,7 @@ const footnotes = `
     `;
 
 const notyet = `
-      Background from https://bg.ibelick.com/
+    Background from https://bg.ibelick.com/
     Email functionality from EmailJS https://dashboard.emailjs.com/sign-in
     Animations from framer motion 
     Framework using reactjs
@@ -16,7 +16,7 @@ const Footnotes = () => {
   return (
     <div className="grid grid-cols-2">
       <div className="text-white text-sm">{footnotes}</div>
-      <div className="text-white text-right text-sm">Made with ReactJS & Vite</div>
+      <div className="text-white text-right text-sm">Made with ReactJS & TailwindCSS</div>
     </div>
   );
 };
