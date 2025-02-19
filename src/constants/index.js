@@ -9,10 +9,10 @@ export const HERO_CONTENT = `I am a software developer with about 3 years of han
 
 export const ABOUT_TEXT = ` With 3 years of professional experience, I have worked with a variety of technologies, 
   including ReactJS, MySQL, Spring Boot, AngularTS, and MongoDB. I started growing an interest with web development 
-  and software engineering when I worked on a fresher project with HCL with a few people. It gave me a hunger
+  and software engineering when I worked on a fresher project with HCLTech with a few co-workers. It gave me a hunger
   for technical work in hopes to providing cutting edge solutions that leverage business growth. 
-  Outside of work, I enjoy running/going to the gym, being an avid and competitive gamer on every game
-  I play, watching sports, and hanging with friends.`;
+  Outside of work, I enjoy running and going to the gym, being an avid and competitive gamer on every game
+  I touch, watching sports, and hanging with friends.`;
 
 export const EXPERIENCES = [
   {
@@ -49,7 +49,7 @@ export const PROJECTS = [
     image: project1,
     description:
       "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "Angular", "Node.js", "MySQL", "Spring Boot"],
+    technologies: ["HTML", "CSS", "Angular", "MySQL", "Spring Boot"],
   },
   {
     title: "Portfolio Website",
@@ -64,6 +64,13 @@ export const PROJECTS = [
     description:
       "Website created to receive feedback and reviews for our family's salsa sold at peach stands in our hometown.",
     technologies: ["HTML", "React.js", "Bootstrap CSS", "EmailJS", "AWS", "SQL"],
+  },
+  {
+    title: "Hey boi",
+    image: project3,
+    description:
+      "A personal portfolio website showcasing projects, skills, and contact information.",
+    technologies: ["HTML", "React.js", "Tailwind CSS", "EmailJS", "Framer Motion"],
   },
 ];
 

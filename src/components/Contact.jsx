@@ -10,9 +10,7 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs
-      .sendForm("service_jif4ysc", "template_ft9zayd", form.current, {
-        publicKey: "S48g12QrwD8eH_UHI",
-      })
+      .sendForm("service_jif4ysc", "template_ft9zayd", form.current, "S48g12QrwD8eH_UHI")
       .then(
         (result) => {
           console.log(result.text);

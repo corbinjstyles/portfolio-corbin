@@ -22,11 +22,12 @@ const App = () => {
       </div>
       <Navbar />
       {/* <Sidebar /> */}
-      <div className="container mx-auto px-8">
+      <div className="container px-8 mx-1">
         <Hero />
-        <About />
-        <Experience />
+        <About />        
         <Technologies />
+        <Experience />
+
         <Projects />
         <Contact />
         <Footnotes />

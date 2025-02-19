@@ -27,10 +27,6 @@ const Navbar = () => {
       <div className="flex flex-shrink-0 items-center">
         {/* <Sidebar/> */}
         <motion.b
-          initial={{ opacity: 0, rotate: -270 }}
-          whileInView={{ opacity: 1, rotate: 0 }}
-          transition={{ duration: 0.5 }}
-          whileTap={{ rotate: 360, duration: 0.1 }}
           className="mx-4 text-4xl bold"
         >
           CS

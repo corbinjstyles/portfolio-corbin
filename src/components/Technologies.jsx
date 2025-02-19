@@ -14,52 +14,42 @@ import { Element } from "react-scroll";
 const technologies = [
   {
     name: "ReactJs",
-    delay: 0.5,
     icon: <RiReactjsLine className="text-7xl text-cyan-400" />,
   },
   {
     name: "MySQL",
-    delay: 0.8,
     icon: <GrMysql className="text-7xl text-cyan-400" />,
   },
   {
     name: "Spring Boot",
-    delay: 1.2,
     icon: <SiSpringboot className="text-7xl text-green-400" />,
   },
   {
     name: "GitHub",
-    delay: 1.6,
     icon: <FaGithub className="text-7xl text-white" />,
   },
   {
     name: "Angular",
-    delay: 2.0,
     icon: <FaAngular className="text-7xl text-red-600" />,
   },
   {
     name: "TailwindCSS",
-    delay: 2.4,
     icon: <RiTailwindCssFill className="text-7xl text-blue-400" />,
   },
   {
     name: "Visual Studio",
-    delay: 2.8,
     icon: <DiVisualstudio className="text-7xl text-blue-400" />,
   },
   {
     name: "Javascript",
-    delay: 3.2,
     icon: <SiJavascript className="text-7xl text-yellow-400" />,
   },
   {
     name: "Typescript",
-    delay: 3.6,
     icon: <SiTypescript className="text-7xl text-blue-500" />,
   },
   {
     name: "Python",
-    delay: 4.0,
     icon: <FaPython className="text-7xl text-purple-600" />,
   },
 ];
@@ -81,7 +71,7 @@ const Technologies = () => {
                 y: 0,
                 transition: {
                   duration: 1.0,
-                  delay: tech.delay,
+                  delay: index * 0.1, // Dynamic delay based on index
                   ease: "linear",
                   type: "spring",
                 },
@@ -96,14 +86,6 @@ const Technologies = () => {
           ))}
         </motion.div>
 
-        {/* <ul className="pt-20 text-center">
-          <li className="text-white">React (1 Year)</li>
-          <li className="text-white">SQL (2 Years)</li>
-          <li className="text-white">Spring Boot (1 Year)</li>
-          <li className="text-white">Github (2 years)</li>
-          <li className="text-white">Angular (1 year)</li>
-          <li className="text-white">Tailwind (1 year)</li>
-        </ul> */}
         <p className="text-white my-5">{TECH_DESC}</p>
       </div>
     </React.Fragment>
