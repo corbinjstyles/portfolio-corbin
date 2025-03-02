@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import { PROJECTS } from "../constants";
 import { motion, useInView } from "framer-motion";
 import Slider from "react-slick";
+import project1 from "../assets/projects/ecommerce.png";
+import project2 from "../assets/projects/salsa.jpg";
+import project3 from "../assets/projects/portfolio.avif";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -24,12 +26,45 @@ const Projects = () => {
     }
   }
 
+  const PROJECTS = [
+    {
+      title: "E-Commerce Website",
+      image: project1,
+      description:
+        "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
+      technologies: ["HTML", "CSS", "Angular", "MySQL", "Spring Boot"],
+    },
+    {
+      title: "Portfolio Website",
+      image: project3,
+      description:
+        "A personal portfolio website showcasing projects, skills, and contact information.",
+      technologies: ["HTML", "React.js", "Tailwind CSS", "EmailJS", "Framer Motion"],
+    },
+    {
+      title: "Salsa Website",
+      image: project2,
+      description:
+        "Website created to receive feedback and reviews for our family's salsa sold at peach stands in our hometown.",
+      technologies: ["HTML", "React.js", "Bootstrap CSS", "EmailJS", "AWS", "SQL"],
+    },
+    {
+      title: "Hey boi",
+      image: project3,
+      description:
+        "A personal portfolio website showcasing projects, skills, and contact information.",
+      technologies: ["HTML", "React.js", "Tailwind CSS", "EmailJS", "Framer Motion"],
+    },];
+
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 3000, // Set autoplay speed in milliseconds
   };
 
   return (

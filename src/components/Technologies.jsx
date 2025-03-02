@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { GrMysql } from "react-icons/gr";
 import { RiReactjsLine } from "react-icons/ri";
 import { SiSpringboot } from "react-icons/si";
@@ -10,6 +10,7 @@ import { SiJavascript, SiTypescript } from "react-icons/si";
 import { FaPython } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Element } from "react-scroll";
+import { FaUnity } from "react-icons/fa";
 
 const technologies = [
   {
@@ -52,16 +53,32 @@ const technologies = [
     name: "Python",
     icon: <FaPython className="text-7xl text-purple-600" />,
   },
+  {
+    name: "Unity",
+    icon: <FaUnity className="text-7xl text-black" />,
+  },
 ];
 
-const TECH_DESC = `More to add later!`;
-
 const Technologies = () => {
+  const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0, name: "" });
+
+  const handleMouseEnter = (e, name) => {
+    setTooltip({ visible: true, x: e.clientX, y: e.clientY, name });
+  };
+
+  const handleMouseMove = (e) => {
+    setTooltip((prev) => ({ ...prev, x: e.clientX, y: e.clientY }));
+  };
+
+  const handleMouseLeave = () => {
+    setTooltip({ visible: false, x: 0, y: 0, name: "" });
+  };
+
   return (
     <React.Fragment>
       <Element id="tech-section" />
-      <div className="pt-10 border-b border-neutral-800 pb-24">
-        <h2 className="my-10 text-center text-4xl text-white">Technologies</h2>
+      <div className="pt-4 border-neutral-800 pb-24">
+        <h2 className="my-4 text-center text-4xl text-white">Tech Stack</h2>
         <motion.div className="flex flex-wrap items-center justify-center gap-4">
           {technologies.map((tech, index) => (
             <motion.div
@@ -79,14 +96,34 @@ const Technologies = () => {
               initial={{ opacity: 0, y: -100 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.1 }}
-              className="rounded-2xl border-4 border-neutral-800 p-4"
+              className="relative group rounded-2xl border-4 border-neutral-800 p-4"
+              onMouseEnter={(e) => handleMouseEnter(e, tech.name)}
+              onMouseMove={handleMouseMove}
+              onMouseLeave={handleMouseLeave}
             >
               {tech.icon}
+              <motion.div
+                className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-sm rounded px-2 py-1"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.2 }}
+              >
+                {tech.name}
+              </motion.div>
             </motion.div>
           ))}
         </motion.div>
-
-        <p className="text-white my-5">{TECH_DESC}</p>
+        {tooltip.visible && (
+          <motion.div
+            className="fixed bg-gray-800 text-white text-sm rounded px-2 py-1"
+            style={{ top: tooltip.y + 10, left: tooltip.x + 10 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.2 }}
+          >
+            {tooltip.name}
+          </motion.div>
+        )}
       </div>
     </React.Fragment>
   );

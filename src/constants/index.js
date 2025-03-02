@@ -17,7 +17,7 @@ export const ABOUT_TEXT = ` With 3 years of professional experience, I have work
 export const EXPERIENCES = [
   {
     year: "Jan 2022 - Jun 2024",
-    role: "IT Consultant",
+    role: "Digital Consultant",
     company: "HCLTech",
     description: `Provided solutions through
       consulting services for client-based needs to meet specific business requirements. 
@@ -40,37 +40,6 @@ export const EXPERIENCES = [
     description: `Completed coursework curriculum to obtain my Bachelor's of Science in Computer Science at UTSA. 
       `,
     technologies: ["Data Structures", "C", "Python", "Java"],
-  },
-];
-
-export const PROJECTS = [
-  {
-    title: "E-Commerce Website",
-    image: project1,
-    description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "Angular", "MySQL", "Spring Boot"],
-  },
-  {
-    title: "Portfolio Website",
-    image: project3,
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "React.js", "Tailwind CSS", "EmailJS", "Framer Motion"],
-  },
-  {
-    title: "Salsa Website",
-    image: project2,
-    description:
-      "Website created to receive feedback and reviews for our family's salsa sold at peach stands in our hometown.",
-    technologies: ["HTML", "React.js", "Bootstrap CSS", "EmailJS", "AWS", "SQL"],
-  },
-  {
-    title: "Hey boi",
-    image: project3,
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "React.js", "Tailwind CSS", "EmailJS", "Framer Motion"],
   },
 ];
 
