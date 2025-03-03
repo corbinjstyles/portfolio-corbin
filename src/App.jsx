@@ -20,7 +20,7 @@ const App = () => {
   return (
     <React.Fragment>
       <div
-        className={`overflow-x-hidden overflow-y-hidden text-neutral-900 antialiased selection:bg-cyan-300 selection:text-cyan-900  ${sidebarOpen ? "ml-44" : ""}`}>
+        className={`overflow-x-hidden overflow-y-hidden text-neutral-900 antialiased selection:bg-white-300 selection:text-white-900  ${sidebarOpen ? "ml-44" : ""}`}>
         <div className="fixed top-0 -z-10 h-full w-full">
           <div
             className="absolute top-0 z-[-2] h-screen w-screen 

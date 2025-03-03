@@ -14,7 +14,7 @@ import { FaUnity } from "react-icons/fa";
 
 const technologies = [
   {
-    name: "ReactJs",
+    name: "React",
     icon: <RiReactjsLine className="text-7xl text-cyan-400" />,
   },
   {
