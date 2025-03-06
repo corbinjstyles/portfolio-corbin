@@ -1,11 +1,17 @@
 import React from "react";
-import aboutImg from "../assets/vancouver_pic.jpg";
-import { ABOUT_TEXT } from "../constants";
 import { motion } from "framer-motion";
 import { Element } from "react-scroll";
 import Technologies from "./Technologies";
 
-const About = () => {
+const About = ({isDarkMode}) => {
+
+  const ABOUT_TEXT = `With 3 years of professional experience, I have worked with a variety of technologies, 
+  including ReactJS, MySQL, Spring Boot, AngularTS, and MongoDB. I started growing an interest with web development 
+  and software engineering when I worked on a fresher project with HCLTech with a few co-workers. It gave me a hunger
+  for technical work in hopes to providing cutting edge solutions that leverage business growth. 
+  Outside of work, I enjoy running and going to the gym, being an avid and competitive gamer on every game
+  I touch, watching sports, and hanging with friends.`;
+
   return (
     <React.Fragment>
       <Element id="about-section">
@@ -21,8 +27,8 @@ const About = () => {
               transition={{ duration: 0.5 }}
               className="my-2 w-full lg:w-1/2 lg:p-4"
             >
-              <div className="flex items-center justify-center">
-                <img className="rounded-2xl" src={aboutImg} alt="about" />
+              <div className="flex justify-center lg:justify-center">
+                <motion.p className={`my-2 text-md py-4 ${isDarkMode ? "text-white" : "text-black"}`}>{ABOUT_TEXT}</motion.p>
               </div>
             </motion.div>
             <motion.div
@@ -31,11 +37,10 @@ const About = () => {
               transition={{ duration: 0.5 }}
               className="w-full lg:w-1/2"
             >
-              <div className="flex justify-center lg:justify-center">
-                <p className="my-2 text-md py-4 text-white">{ABOUT_TEXT}</p>
-
+              
+              <div className="flex justify-center">
+                <Technologies isDarkMode={isDarkMode}/>
               </div>
-              <div className="flex justify-center"><Technologies /></div>
             </motion.div>
           </div>
         </div>

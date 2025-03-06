@@ -12,33 +12,42 @@ import { motion } from "framer-motion";
 
 const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
 
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode); 
+  };
+
   return (
     <React.Fragment>
       <div
-        className={`overflow-x-hidden overflow-y-hidden text-neutral-900 antialiased selection:bg-white-300 selection:text-white-900  ${sidebarOpen ? "ml-44" : ""}`}>
+        className={`overflow-x-hidden overflow-y-hidden antialiased selection:bg-white-300 selection:text-white-900 ${
+          sidebarOpen ? "ml-44" : ""
+        } ${isDarkMode ? "text-neutral-900 bg-black" : "text-black bg-white"}`} // Apply theme classes
+      >
         <div className="fixed top-0 -z-10 h-full w-full">
           <div
-            className="absolute top-0 z-[-2] h-screen w-screen 
-          bg-[#000000] 
-          bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] 
-          bg-[size:20px_20px]"
+            className={`absolute top-0 z-[-2] h-screen w-screen ${
+              isDarkMode
+                ? "bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"
+                : "bg-[#ffffff] bg-[radial-gradient(#00000033_1px,#ffffff1d_1px)] bg-[size:20px_20px]"
+            }`}
           />
         </div>
-        <Navbar toggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} />
+        <Navbar toggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
         <div className="container items-center mx-auto">
-          <Hero />
-          <About />
-          <Experience />
-          <Projects />
-          <Contact />
+          <Hero isDarkMode={isDarkMode}/>
+          <About isDarkMode={isDarkMode}/>
+          <Experience isDarkMode={isDarkMode}/>
+          {/* <Projects isDarkMode={isDarkMode}/> */}
+          <Contact isDarkMode={isDarkMode}/>
         </div>
         <div className="h-10 px-20">
-          <Footnotes />
+          <Footnotes isDarkMode={isDarkMode}/>
         </div>
       </div>
     </React.Fragment>

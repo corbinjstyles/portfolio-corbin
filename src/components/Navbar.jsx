@@ -1,9 +1,9 @@
 import React from "react";
-import { FaLinkedin, FaGithub, FaBars, FaTimes } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaBars, FaTimes, FaSun, FaMoon, FaFileDownload } from "react-icons/fa";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 
-const Navbar = ({ toggleSidebar, sidebarOpen }) => {
+const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
   return (
     <React.Fragment>
       <motion.nav
@@ -27,16 +27,24 @@ const Navbar = ({ toggleSidebar, sidebarOpen }) => {
               <FaGithub />
             </motion.button>
           </a>
+          <a href="src/assets/Corbin Styles.pdf" download className="text-2xl">
+            <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+              <FaFileDownload />
+            </motion.button>
+          </a>
           <button onClick={toggleSidebar} className="text-2xl">
             {sidebarOpen ? <FaTimes /> : <FaBars />}
+          </button>
+          <button onClick={toggleTheme} className="border-black">
+            {isDarkMode ? <FaSun /> : <FaMoon />}
           </button>
         </div>
       </motion.nav>
 
       {/* Sidebar */}
       <motion.div
-        initial={{ x: '100%' }}
-        animate={{ x: sidebarOpen ? 0 : '-100%' }}
+        initial={{ x: "100%" }}
+        animate={{ x: sidebarOpen ? 0 : "-100%" }}
         transition={{ duration: 0, ease: "easeInOut" }}
         className="fixed top-0 left-0 h-full w-44 bg-blue-300 shadow-lg z-50"
       >
@@ -44,6 +52,7 @@ const Navbar = ({ toggleSidebar, sidebarOpen }) => {
           <button onClick={toggleSidebar} className="text-2xl">
             {sidebarOpen ? <FaTimes /> : <FaBars />}
           </button>
+
           <Link to="about-section" spy={true} smooth={true} duration={500} onClick={toggleSidebar}>
             <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="my-4 text-2xl">
               About
@@ -58,7 +67,10 @@ const Navbar = ({ toggleSidebar, sidebarOpen }) => {
             <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className="my-4 text-2xl">
               Contact
             </motion.button>
-          </Link>
+          </Link>          
+          <button onClick={toggleTheme} className="text-2xl">
+            {isDarkMode ? <FaSun /> : <FaMoon />}
+          </button>
         </div>
       </motion.div>
     </React.Fragment>

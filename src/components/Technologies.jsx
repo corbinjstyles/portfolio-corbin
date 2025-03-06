@@ -12,55 +12,64 @@ import { motion } from "framer-motion";
 import { Element } from "react-scroll";
 import { FaUnity } from "react-icons/fa";
 
-const technologies = [
-  {
-    name: "React",
-    icon: <RiReactjsLine className="text-7xl text-cyan-400" />,
-  },
-  {
-    name: "MySQL",
-    icon: <GrMysql className="text-7xl text-cyan-400" />,
-  },
-  {
-    name: "Spring Boot",
-    icon: <SiSpringboot className="text-7xl text-green-400" />,
-  },
-  {
-    name: "GitHub",
-    icon: <FaGithub className="text-7xl text-white" />,
-  },
-  {
-    name: "Angular",
-    icon: <FaAngular className="text-7xl text-red-600" />,
-  },
-  {
-    name: "TailwindCSS",
-    icon: <RiTailwindCssFill className="text-7xl text-blue-400" />,
-  },
-  {
-    name: "Visual Studio",
-    icon: <DiVisualstudio className="text-7xl text-blue-400" />,
-  },
-  {
-    name: "Javascript",
-    icon: <SiJavascript className="text-7xl text-yellow-400" />,
-  },
-  {
-    name: "Typescript",
-    icon: <SiTypescript className="text-7xl text-blue-500" />,
-  },
-  {
-    name: "Python",
-    icon: <FaPython className="text-7xl text-purple-600" />,
-  },
-  {
-    name: "Unity",
-    icon: <FaUnity className="text-7xl text-black" />,
-  },
-];
+const Technologies = ({ isDarkMode }) => {
+  const technologies = [
+    {
+      name: "React",
+      icon: <RiReactjsLine className="text-5xl text-cyan-400" />,
+    },
+    {
+      name: "MySQL",
+      icon: <GrMysql className="text-5xl text-cyan-400" />,
+    },
+    {
+      name: "Spring Boot",
+      icon: <SiSpringboot className="text-5xl text-green-400" />,
+    },
+    {
+      name: "GitHub",
+      icon: <FaGithub className={`text-5xl ${isDarkMode ? "text-white" : "text-black"}`} />,
+    },
+    {
+      name: "Angular",
+      icon: <FaAngular className="text-5xl text-red-600" />,
+    },
+    {
+      name: "TailwindCSS",
+      icon: <RiTailwindCssFill className="text-5xl text-blue-400" />,
+    },
+    {
+      name: "Visual Studio",
+      icon: <DiVisualstudio className="text-5xl text-blue-400" />,
+    },
+    {
+      name: "Javascript",
+      icon: <SiJavascript className="text-5xl text-yellow-400" />,
+    },
+    {
+      name: "Typescript",
+      icon: <SiTypescript className="text-5xl text-blue-500" />,
+    },
+    {
+      name: "Python",
+      icon: <FaPython className="text-5xl text-purple-600" />,
+    },
+    {
+      name: "Unity",
+      icon: (
+        <FaUnity
+          className={`text-5xl ${isDarkMode ? "text-white" : "text-black"}`}
+        />
+      ),
+    },
+  ];
 
-const Technologies = () => {
-  const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0, name: "" });
+  const [tooltip, setTooltip] = useState({
+    visible: false,
+    x: 0,
+    y: 0,
+    name: "",
+  });
 
   const handleMouseEnter = (e, name) => {
     setTooltip({ visible: true, x: e.clientX, y: e.clientY, name });
@@ -77,8 +86,7 @@ const Technologies = () => {
   return (
     <React.Fragment>
       <Element id="tech-section" />
-      <div className="pt-4 border-neutral-800 pb-24">
-        <h2 className="my-4 text-center text-4xl text-white">Tech Stack</h2>
+      <div className="my-10 pt-4 border-neutral-800 pb-24">
         <motion.div className="flex flex-wrap items-center justify-center gap-4">
           {technologies.map((tech, index) => (
             <motion.div

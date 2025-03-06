@@ -1,8 +1,12 @@
 import React from "react";
-import { HERO_CONTENT } from "../constants";
 import profilePic from "../assets/pfp.jpg";
 import { motion } from "framer-motion";
-const Hero = () => {
+const Hero = ({isDarkMode}) => {
+
+  const HERO_CONTENT = `I am a software developer with about 3 years of hands-on experience.
+  I've worked with many people in the past both in school and in the marketplace and have continued to learn more 
+  about the industry while networking with others. Each project I've worked on has always taught me something new
+  and continues to build more and more excitement that revolves around it! `;
   return (
     <div className="border-b border-neutral-900 pb-4 lg:mb-35">
       <div className="flex flex-wrap">
@@ -36,7 +40,7 @@ const Hero = () => {
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 2.5 }}
-              className="text-white"
+              className= {`${isDarkMode ? "text-white" : "text-black"}`}
             >
               {HERO_CONTENT}
             </motion.p>
