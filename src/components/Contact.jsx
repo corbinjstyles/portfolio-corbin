@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
-const Contact = () => {
+const Contact = ({isDarkMode}) => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formError, setFormError] = useState(null);
   const form = useRef(null);
@@ -43,7 +43,7 @@ const Contact = () => {
             initial={{ y: "200%" }}
             transition={{ ease: [0.455, 0.03, 0.515, 0.955], duration: 1 }}
             animate={{ y: 0 }}
-            className="my-10 text-white text-center text-4xl"
+            className={`my-10 ${isDarkMode ? "text-white" : "text-black"} text-center text-4xl`}
           >
             Contact Me!
           </motion.h3>
@@ -77,7 +77,7 @@ const Contact = () => {
             </motion.div>
           ) : (
             <form method="POST" action="" ref={form} onSubmit={sendEmail}>
-              <div className="mx-auto rounded-xl max-w-xl">
+              <div className="mx-auto rounded-xl max-w-xl bg-gray-800 p-5">
                 <div className="grid grid-cols-1 gap-6 label">
                   <div className="flex">
                     <label htmlFor="firstName" className="">
@@ -161,7 +161,7 @@ const Contact = () => {
                   </label>
                   <div className="text-center">
                     <motion.button
-                      whileHover={{ scale: 1.1 }}
+                      whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.9 }}
                       type="submit"
                       className="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 hover:bg-indigo-300 hover:text-neutral-800 p-3 rounded-lg w-full"
@@ -200,7 +200,7 @@ const Contact = () => {
             duration: 1,
           }}
           animate={{ y: 0, opacity: 1 }}
-          className="py-3 text-white"
+          className={`py-3 ${isDarkMode ? "text-white" : "text-black"}`}
         >
           I am located near UTSA in the San Antonio metro area where I work. If
           you want to discuss business ideas or meet near it's vicinity, then
