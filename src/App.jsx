@@ -39,11 +39,13 @@ const App = () => {
           />
         </div>
         <Navbar toggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
-        <div className="container items-center mx-auto">
+        <div className="container mx-auto px-4">
           <Hero isDarkMode={isDarkMode}/>
           <About isDarkMode={isDarkMode}/>
-          <Experience isDarkMode={isDarkMode}/>
-          {/* <Projects isDarkMode={isDarkMode}/> */}
+          <div className="flex flex-wrap justify-center">
+            <Experience isDarkMode={isDarkMode}/>
+            {/* <Projects isDarkMode={isDarkMode}/> */}
+          </div>
           <Contact isDarkMode={isDarkMode}/>
         </div>
         <div className="h-10 px-20">

@@ -33,11 +33,11 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
   return (
     <React.Fragment>
       <motion.nav
-        whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: 1000 }}
+        transition={{ duration: 0.2, ease: "easeInOut" }}
         viewport={{ once: true }}
-        className="rounded flex-row bg-red-400 mb-5 flex mx-20 mt-12 items-center justify-between py-1"
+        className="rounded flex-row bg-red-400 mb-5 flex ml-20 mt-12 items-center justify-between py-1"
       >
         <div className="flex flex-shrink-0 items-center">
           <motion.b className="mx-4 text-4xl bold">CS</motion.b>

@@ -3,10 +3,7 @@ import profilePic from "../assets/pfp.jpg";
 import { motion } from "framer-motion";
 
 const Hero = ({ isDarkMode }) => {
-  const HERO_CONTENT = `I am a software developer with about 3 years of hands-on experience.
-  I've worked with many people in the past both in school and in the marketplace and have continued to learn more 
-  about the industry while networking with others. Each project I've worked on has always taught me something new
-  and continues to build more and more excitement that revolves around it! `;
+  const HERO_CONTENT = ` `;
 
   return (
     <div className="border-b border-neutral-900 pb-4 lg:mb-35">

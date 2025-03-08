@@ -3,14 +3,18 @@ import { motion } from "framer-motion";
 import { Element } from "react-scroll";
 import Technologies from "./Technologies";
 
-const About = ({isDarkMode}) => {
-
-  const ABOUT_TEXT = `With 3 years of professional experience, I have worked with a variety of technologies, 
-  including ReactJS, MySQL, Spring Boot, AngularTS, and MongoDB. I started growing an interest with web development 
-  and software engineering when I worked on a fresher project with HCLTech with a few co-workers. It gave me a hunger
-  for technical work in hopes to providing cutting edge solutions that leverage business growth. 
-  Outside of work, I enjoy running and going to the gym, being an avid and competitive gamer on every game
-  I touch, watching sports, and hanging with friends.`;
+const About = ({ isDarkMode }) => {
+  const ABOUT_TEXT = `I am a software developer with about 3 years of hands-on experience. 
+  I've worked with many people in the past both in school and in the marketplace and 
+  have continued to learn more about the industry while networking with others. 
+  Each project I've worked on has always taught me something new and continues to build more 
+  and more excitement that revolves around it!\n
+  With 3 years of professional experience, I have worked with a variety of technologies, 
+  including ReactJS, MySQL, Spring Boot, AngularTS, and MongoDB. 
+  I started growing an interest with web development and software engineering when 
+  I worked on a fresher project with HCLTech with a few co-workers. It gave me a hunger for technical work in hopes to providing cutting edge solutions that leverage business growth.\n
+  Outside of work, I enjoy running and going to the gym, being an avid and competitive gamer on every game I touch, 
+  watching sports, and hanging with friends. I am always eager to learn new technologies and take on new challenges.`;
 
   return (
     <React.Fragment>
@@ -28,7 +32,9 @@ const About = ({isDarkMode}) => {
               className="my-2 w-full lg:w-1/2 lg:p-4"
             >
               <div className="flex justify-center lg:justify-center">
-                <motion.p className={`my-2 text-md py-4 ${isDarkMode ? "text-white" : "text-black"}`}>{ABOUT_TEXT}</motion.p>
+                <motion.p className={`my-2 text-md py-4 ${isDarkMode ? "text-white" : "text-black"}`} style={{ whiteSpace: "pre-line" }}>
+                  {ABOUT_TEXT}
+                </motion.p>
               </div>
             </motion.div>
             <motion.div
@@ -37,9 +43,8 @@ const About = ({isDarkMode}) => {
               transition={{ duration: 0.5 }}
               className="w-full lg:w-1/2"
             >
-              
               <div className="flex justify-center">
-                <Technologies isDarkMode={isDarkMode}/>
+                <Technologies isDarkMode={isDarkMode} />
               </div>
             </motion.div>
           </div>
