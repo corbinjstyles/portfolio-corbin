@@ -45,7 +45,7 @@ const Hero = ({ isDarkMode }) => {
               className="mt-4 text-lg font-mono"
             >
               <span className={`${isDarkMode ? "text-white" : "text-black"}`}>
-                <span className="text-green-500">></span> Welcome to my portfolio!
+                <span className="text-green-500">&gt;</span> Welcome to my portfolio!
               </span>
             </motion.div>
           </div>
