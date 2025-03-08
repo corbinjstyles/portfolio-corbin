@@ -14,7 +14,7 @@ const notyet = `
 
 const Footnotes = ({isDarkMode}) => {
   return (
-    <div className="grid grid-cols-2">
+    <div className="flex flex-col grid grid-cols-2">
       <div className={`${isDarkMode ? "text-white" : "text-black"} text-sm`}>{footnotes}</div>
       <div className={`${isDarkMode ? "text-white" : "text-black"} text-sm text-right`}>Made with ReactJS & TailwindCSS</div>
     </div>

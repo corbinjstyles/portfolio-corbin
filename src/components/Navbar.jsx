@@ -34,8 +34,8 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
     <React.Fragment>
       <motion.nav
         whileInView={{ opacity: 1, x: 0 }}
-        initial={{ opacity: 0, x: 1000 }}
-        transition={{ duration: 0.2, ease: "easeInOut" }}
+        initial={{ opacity: 0, x: 100 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
         viewport={{ once: true }}
         className="rounded flex-row bg-red-400 mb-5 flex ml-20 mt-12 items-center justify-between py-1"
       >
@@ -45,9 +45,8 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
         <div className="m-10 flex items-center justify-center gap-4 text-2xl">
           <button
             onClick={toggleTheme}
-            className={`border-2 p-1 hover:bg-gray-500 hover:bg-opacity-20 rounded ${
-              isDarkMode ? "border-white" : "border-black"
-            }`}
+            className={`border-2 p-1 hover:bg-gray-500 hover:bg-opacity-20 rounded ${isDarkMode ? "border-white" : "border-black"
+              }`}
             data-tip="Toggle Theme"
           >
             {isDarkMode ? <MdLightMode /> : <MdDarkMode />}
@@ -61,7 +60,7 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
       {/* Sidebar */}
       <motion.div
         initial={{ x: "100%" }}
-        animate={{ x: sidebarOpen ? 0 : "-100%" }}
+        animate={{ x: sidebarOpen ? 0 : "-101%" }}
         transition={{ duration: 0, ease: "easeInOut" }}
         className="fixed top-0 left-0 h-full w-44 bg-red-400 shadow-lg"
       >
@@ -69,55 +68,63 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
           <button onClick={toggleSidebar} className="text-2xl" data-tip="Menu">
             {sidebarOpen ? <FaTimes /> : <FaBars />}
           </button>
-          <Link
-            to="about-section"
-            spy={true}
-            smooth={true}
-            duration={500}
-            onClick={toggleSidebar}
-          >
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="my-4 text-2xl"
-              data-tip="About"
+          <motion.div
+            className="border-b border-gray-900 bg-red-400 w-full text-center"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}>
+            <Link
+              to="about-section"
+              spy={true}
+              smooth={true}
+              duration={500}
+              onClick={toggleSidebar}
             >
-              About
-            </motion.button>
-          </Link>
-          <Link
-            to="ex-section"
-            spy={true}
-            smooth={true}
-            duration={500}
-            onClick={toggleSidebar}
-          >
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="my-4 text-2xl"
-              data-tip="Experience"
+              <button
+                className="my-4 text-2xl text-center"
+                data-tip="About"
+              >
+                About
+              </button>
+            </Link>
+          </motion.div>
+          <motion.div className="border-b border-gray-900 bg-red-400 w-full text-center"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}>
+            <Link
+              to="ex-section"
+              spy={true}
+              smooth={true}
+              duration={500}
+              onClick={toggleSidebar}
             >
-              Experience
-            </motion.button>
-          </Link>
-          <Link
-            to="contact"
-            spy={true}
-            smooth={true}
-            duration={500}
-            onClick={toggleSidebar}
-          >
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="my-4 text-2xl"
-              data-tip="Contact"
+              <button
+
+                className="my-4 text-2xl"
+                data-tip="Experience"
+              >
+                Experience
+              </button>
+            </Link></motion.div>
+          <motion.div className="border-b border-gray-900 bg-red-400 w-full text-center"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}>
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              duration={500}
+              onClick={toggleSidebar}
             >
-              Contact
-            </motion.button>
-          </Link>
-          <div className="flex gap-4 my-4">
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                className="my-4 text-2xl"
+                data-tip="Contact"
+              >
+                Contact
+              </motion.button>
+            </Link></motion.div>
+          <div className="flex text-2xl gap-4 my-4">
             <a
               type="button"
               href="https://www.linkedin.com/in/corbinstyles/"
@@ -158,9 +165,8 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
           <div className="mt-auto mb-14">
             <button
               onClick={toggleTheme}
-              className={`border-2 p-1 rounded hover:bg-gray-500 hover:bg-opacity-20 ${
-                isDarkMode ? "border-white" : "border-black"
-              }`}
+              className={`border-2 p-1 rounded hover:bg-gray-500 hover:bg-opacity-20 ${isDarkMode ? "border-white" : "border-black"
+                }`}
               data-tip="Light/Dark Mode"
             >
               {isDarkMode ? <MdLightMode /> : <MdDarkMode />}

@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
-const Contact = ({isDarkMode}) => {
+const Contact = ({ isDarkMode }) => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formError, setFormError] = useState(null);
   const form = useRef(null);
@@ -33,7 +33,7 @@ const Contact = ({isDarkMode}) => {
   }, [formSubmitted]);
 
   return (
-    <div id="contact" className="flex flex-wrap">
+    <div id="contact" className="flex flex-wrap border-b border-neutral-900">
       <div
         id="form-container"
         className="lg:p-5 font-Encode-Sans w-full lg:w-1/2"
@@ -87,7 +87,7 @@ const Contact = ({isDarkMode}) => {
                         name="firstName"
                         required="required"
                         placeholder="First Name"
-                        className="w-full block rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                        className="w-full block rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400"
                       />
                     </label>
                     <label htmlFor="lastName">
@@ -97,7 +97,7 @@ const Contact = ({isDarkMode}) => {
                         name="lastName"
                         required="required"
                         placeholder="Last Name"
-                        className="w-full block rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                        className="w-full block rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400"
                       />
                     </label>
                   </div>
@@ -113,7 +113,7 @@ const Contact = ({isDarkMode}) => {
                     />
                   </label>
 
-                  <div>
+                  {/* <div>
                     <div className="flex rounded-md bg-white outline outline-1 -outline-offset-1 outline-gray-300 has-[input:focus-within]:outline has-[input:focus-within]:outline-2 has-[input:focus-within]:-outline-offset-2 has-[input:focus-within]:outline-indigo-600">
                       <div className="grid shrink-0 grid-cols-1 focus-within:relative">
                         <select
@@ -137,18 +137,18 @@ const Contact = ({isDarkMode}) => {
                         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}$"
                       />
                     </div>
-                  </div>
+                  </div> */}
 
-                  <label htmlFor="subject">
+                  {/* <label htmlFor="subject">
                     <input
                       type="subject"
                       id="subject"
                       name="subject"
                       placeholder="Subject"
                       required="required"
-                      className="w-full block rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                      className="w-full block rounded-md bg-white px-3.5 py-2 text-gray-900 outline-gray-300 placeholder:text-gray-400"
                     />
-                  </label>
+                  </label> */}
                   <label>
                     <textarea
                       id="message"
@@ -156,7 +156,7 @@ const Contact = ({isDarkMode}) => {
                       rows="5"
                       required="required"
                       placeholder="Message"
-                      className="w-full block rounded-md bg-white px-3.5  text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                      className="w-full block rounded-md bg-white px-3.5 py-2 text-gray-900 outline-gray-300 placeholder:text-gray-400"
                     ></textarea>
                   </label>
                   <div className="text-center">
@@ -164,7 +164,7 @@ const Contact = ({isDarkMode}) => {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.9 }}
                       type="submit"
-                      className="uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 hover:bg-indigo-300 hover:text-neutral-800 p-3 rounded-lg w-full"
+                      className="text-sm tracking-wide bg-indigo-500 text-gray-100 hover:bg-indigo-300 hover:text-neutral-800 p-3 rounded-lg w-full"
                     >
                       Send
                     </motion.button>

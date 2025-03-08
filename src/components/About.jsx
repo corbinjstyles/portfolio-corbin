@@ -9,6 +9,7 @@ const About = ({ isDarkMode }) => {
   have continued to learn more about the industry while networking with others. 
   Each project I've worked on has always taught me something new and continues to build more 
   and more excitement that revolves around it!\n
+
   With 3 years of professional experience, I have worked with a variety of technologies, 
   including ReactJS, MySQL, Spring Boot, AngularTS, and MongoDB. 
   I started growing an interest with web development and software engineering when 
@@ -19,7 +20,7 @@ const About = ({ isDarkMode }) => {
   return (
     <React.Fragment>
       <Element id="about-section">
-        <div className="border-b border-neutral-900 pb-4">
+        <div className="border-b border-neutral-900">
           <h1 className="mt-10 text-pink-500 text-center text-4xl">
             About
             <span className="text-neutral-500"> Me</span>
@@ -32,7 +33,7 @@ const About = ({ isDarkMode }) => {
               className="my-2 w-full lg:w-1/2 lg:p-4"
             >
               <div className="flex justify-center lg:justify-center">
-                <motion.p className={`my-2 text-md py-4 ${isDarkMode ? "text-white" : "text-black"}`} style={{ whiteSpace: "pre-line" }}>
+                <motion.p className={`my-2 text-md py-4 ${isDarkMode ? "text-white" : "text-black"}`} style={{  }}>
                   {ABOUT_TEXT}
                 </motion.p>
               </div>

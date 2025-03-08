@@ -11,6 +11,7 @@ import { FaPython } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Element } from "react-scroll";
 import { FaUnity } from "react-icons/fa";
+import pythonLogo from "../assets/python.png";
 
 const Technologies = ({ isDarkMode }) => {
   const technologies = [
@@ -52,7 +53,7 @@ const Technologies = ({ isDarkMode }) => {
     },
     {
       name: "Python",
-      icon: <FaPython className="text-5xl text-purple-600" />,
+      icon: <img src={pythonLogo} alt="Python" className="h-12 w-12"/>,
     },
     {
       name: "Unity",
