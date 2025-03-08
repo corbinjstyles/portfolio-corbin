@@ -37,7 +37,7 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
         initial={{ opacity: 0, x: 100 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         viewport={{ once: true }}
-        className="rounded flex-row bg-red-400 mb-5 flex ml-20 mt-12 items-center justify-between py-1"
+        className="rounded-l flex-row bg-red-400 mb-5 flex ml-20 mt-12 items-center justify-between py-1"
       >
         <div className="flex flex-shrink-0 items-center">
           <motion.b className="mx-4 text-4xl bold">CS</motion.b>
@@ -62,69 +62,80 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
         initial={{ x: "100%" }}
         animate={{ x: sidebarOpen ? 0 : "-101%" }}
         transition={{ duration: 0, ease: "easeInOut" }}
-        className="fixed top-0 left-0 h-full w-44 bg-red-400 shadow-lg"
+        className={`bg-red-400 fixed top-0 left-0 h-full w-44 shadow-lg`}
       >
-        <div className="flex flex-col items-center justify-center h-full my-10 ">
-          <button onClick={toggleSidebar} className="text-2xl" data-tip="Menu">
+        <div className="flex flex-col items-center justify-center h-full my-10 top:0">
+          <button onClick={toggleSidebar} className="text-2xl my-4" data-tip="Menu">
             {sidebarOpen ? <FaTimes /> : <FaBars />}
           </button>
-          <motion.div
-            className="border-b border-gray-900 bg-red-400 w-full text-center"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}>
+          <div className={`${isDarkMode ? "bg-black" : "bg-white"
+            } w-full`}>
             <Link
+              type="button"
               to="about-section"
               spy={true}
               smooth={true}
               duration={500}
-              onClick={toggleSidebar}
+              className="w-full"
             >
-              <button
-                className="my-4 text-2xl text-center"
-                data-tip="About"
+              <motion.div
+                type="button"
+                className="border border-t-2 hover:border-2 border-gray-900 bg-red-400 w-full text-center"
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                style={{ transformOrigin: "left center" }}
               >
-                About
-              </button>
+                <button
+                  className="my-4 text-2xl text-center w-full"
+                  data-tip="About"
+                >
+                  About
+                </button>
+              </motion.div>
             </Link>
-          </motion.div>
-          <motion.div className="border-b border-gray-900 bg-red-400 w-full text-center"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}>
             <Link
               to="ex-section"
               spy={true}
               smooth={true}
               duration={500}
-              onClick={toggleSidebar}
+              className="w-full"
             >
-              <button
-
-                className="my-4 text-2xl"
-                data-tip="Experience"
+              <motion.div
+                className="border hover:border-2 border-gray-900 bg-red-400 w-full text-center"
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                style={{ transformOrigin: "left center" }}
               >
-                Experience
-              </button>
-            </Link></motion.div>
-          <motion.div className="border-b border-gray-900 bg-red-400 w-full text-center"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}>
+                <button
+                  className="my-4 text-2xl text-center w-full"
+                  data-tip="Experience"
+                >
+                  Experience
+                </button>
+              </motion.div>
+            </Link>
             <Link
               to="contact"
               spy={true}
               smooth={true}
               duration={500}
-              onClick={toggleSidebar}
+              className="w-full"
             >
-              <motion.button
-                whileHover={{ scale: 1.1 }}
+              <motion.div
+                className="border border-b-2 hover:border-2 border-gray-900 bg-red-400 w-full text-center"
+                whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
-                className="my-4 text-2xl"
-                data-tip="Contact"
+                style={{ transformOrigin: "left center" }}
               >
-                Contact
-              </motion.button>
-            </Link></motion.div>
-          <div className="flex text-2xl gap-4 my-4">
+                <button
+                  className="my-4 text-2xl text-center w-full"
+                  data-tip="Contact"
+                >
+                  Contact
+                </button>
+              </motion.div>
+            </Link></div>
+          <div className="bg-red-400 flex text-2xl gap-4 my-4">
             <a
               type="button"
               href="https://www.linkedin.com/in/corbinstyles/"
@@ -162,7 +173,8 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
               </motion.button>
             </a>
           </div>
-          <div className="mt-auto mb-14">
+
+          <div className="bg-red-400 mt-auto mb-14">
             <button
               onClick={toggleTheme}
               className={`border-2 p-1 rounded hover:bg-gray-500 hover:bg-opacity-20 ${isDarkMode ? "border-white" : "border-black"

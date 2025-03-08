@@ -38,6 +38,16 @@ const Hero = ({ isDarkMode }) => {
             >
               {HERO_CONTENT}
             </motion.p>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 3 }}
+              className="mt-4 text-lg font-mono"
+            >
+              <span className={`${isDarkMode ? "text-white" : "text-black"}`}>
+                <span className="text-green-500">></span> Welcome to my portfolio!
+              </span>
+            </motion.div>
           </div>
         </div>
         <div className="w-full lg:w-1/2 lg:p-8">

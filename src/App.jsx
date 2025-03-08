@@ -48,9 +48,8 @@ const App = () => {
           </div>
           <Contact isDarkMode={isDarkMode} />
         </div>
-        <div className="h-10 px-20">
-          <Footnotes isDarkMode={isDarkMode} />
-        </div>
+        <Footnotes isDarkMode={isDarkMode} />
+
       </div>
     </React.Fragment>
   );
