@@ -45,7 +45,7 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
         <div className="m-10 flex items-center justify-center gap-4 text-2xl">
           <button
             onClick={toggleTheme}
-            className={`border-2 p-1 hover:bg-gray-500 hover:bg-opacity-20 rounded ${isDarkMode ? "border-white" : "border-black"
+            className={`border-2 p-1 rounded bg-gray-500 bg-opacity-20 ${isDarkMode ? "border-white hover:bg-white hover:bg-opacity-30" : "border-black hover:bg-black hover:bg-opacity-30"
               }`}
             data-tip="Toggle Theme"
           >
@@ -86,7 +86,7 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
                 style={{ transformOrigin: "left center" }}
               >
                 <button
-                  className="my-4 text-2xl text-center w-full"
+                  className="my-4 font-bold text-2xl text-center w-full"
                   data-tip="About"
                 >
                   About
@@ -107,7 +107,7 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
                 style={{ transformOrigin: "left center" }}
               >
                 <button
-                  className="my-4 text-2xl text-center w-full"
+                  className="my-4 font-bold text-2xl text-center w-full"
                   data-tip="Experience"
                 >
                   Experience
@@ -128,7 +128,7 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
                 style={{ transformOrigin: "left center" }}
               >
                 <button
-                  className="my-4 text-2xl text-center w-full"
+                  className="my-4 font-bold text-2xl text-center w-full"
                   data-tip="Contact"
                 >
                   Contact
@@ -177,7 +177,7 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
           <div className="bg-red-400 mt-auto mb-14">
             <button
               onClick={toggleTheme}
-              className={`border-2 p-1 rounded hover:bg-gray-500 hover:bg-opacity-20 ${isDarkMode ? "border-white" : "border-black"
+              className={`border-2 p-1 rounded bg-gray-500 bg-opacity-20 ${isDarkMode ? "border-white hover:bg-white hover:bg-opacity-30" : "border-black hover:bg-black hover:bg-opacity-30"
                 }`}
               data-tip="Light/Dark Mode"
             >

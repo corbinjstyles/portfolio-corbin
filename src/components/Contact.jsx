@@ -184,7 +184,7 @@ const Contact = ({ isDarkMode }) => {
             duration: 1,
           }}
           animate={{ y: 0, opacity: 1 }}
-          className="py-9"
+          className="py-3"
         >
           <iframe
             width="100%"
