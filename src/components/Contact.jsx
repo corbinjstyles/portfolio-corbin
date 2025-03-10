@@ -33,7 +33,7 @@ const Contact = ({ isDarkMode }) => {
   }, [formSubmitted]);
 
   return (
-    <div id="contact" className="flex flex-wrap border-b border-neutral-900">
+    <div id="contact" className={`flex flex-wrap border-b ${isDarkMode ? "border-neutral-900" : "border-neutral-200"} `}>
       <div
         id="form-container"
         className="lg:p-5 font-Encode-Sans w-full lg:w-1/2"

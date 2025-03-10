@@ -9,7 +9,7 @@ const About = ({ isDarkMode }) => {
   return (
     <React.Fragment>
       <Element id="about-section">
-        <div className="border-b border-neutral-900">
+        <div className={`border-b ${isDarkMode ? "border-neutral-900" : "border-neutral-200"}`}>
           <h1 className={`pb-1 font-medium text-6xl text-center lg:mt-10 ${isDarkMode ? "text-white" : "text-black"
             }`}>
             About

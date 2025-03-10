@@ -7,7 +7,6 @@ import { FaGithub } from "react-icons/fa";
 import { FaAngular } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiJavascript, SiTypescript } from "react-icons/si";
-import { FaPython } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Element } from "react-scroll";
 import { FaUnity } from "react-icons/fa";
@@ -87,7 +86,7 @@ const Technologies = ({ isDarkMode }) => {
   return (
     <React.Fragment>
       <Element id="tech-section" />
-      <div className="my-10 pt-4 border-neutral-800 pb-24">
+      <div className={`my-10 pt-4`}>
         <motion.div className="flex flex-wrap items-center justify-center gap-4">
           {technologies.map((tech, index) => (
             <motion.div
@@ -105,14 +104,14 @@ const Technologies = ({ isDarkMode }) => {
               initial={{ opacity: 0, y: -100 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.1 }}
-              className={`relative group rounded-2xl border-4 ${isDarkMode ? "border-neutral-400" : "border-neutral-600"} p-4`}
+              className={`relative group rounded-2xl border-2 ${isDarkMode ? "border-neutral-400" : "border-neutral-600"} p-4`}
               onMouseEnter={(e) => handleMouseEnter(e, tech.name)}
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
             >
               {tech.icon}
               <motion.div
-                className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-sm rounded px-2 py-1"
+                className="absolute bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-sm rounded px-1 py-1"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.2 }}

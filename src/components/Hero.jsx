@@ -3,10 +3,12 @@ import vancouverPic from "../assets/vancouver_pic.jpg";
 import { motion } from "framer-motion";
 
 const Hero = ({ isDarkMode }) => {
-  const HERO_CONTENT = `Welcome to my portfolio! The main purpose for creating this webpage is to 
+  const HERO_CONTENT = `Welcome to my portfolio! 
+    The main purpose for creating this webpage is to 
     document skills and experiences that I've attained throughout my career. 
-    This website is also used as a sandbox for new code and features to showcase my web development skills in hopes 
-    to provide more clean and user-friendly experiences for visitors. 
+    Also like to use this website as a sandbox for new code and features to showcase 
+    my web development skills in hopes to provide more clean and user-friendly 
+    experiences for visitors of webpages I create. 
     If you'd have any questions, feel free to email me at the bottom of the page!
     If you'd like to network with me, feel free to reach out to me via LinkedIn!
     Cheers!`;
@@ -45,7 +47,7 @@ const Hero = ({ isDarkMode }) => {
   }, [currentText, isDeleting, typingSpeed, loopNum, typingText, currentIndex]);
 
   return (
-    <div className="border-b border-neutral-900 pb-4 lg:mb-35">
+    <div className={`border-b ${isDarkMode ? "border-neutral-900" : "border-neutral-200"} pb-4 lg:mb-35`}>
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start">

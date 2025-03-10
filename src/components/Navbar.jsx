@@ -18,18 +18,6 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
     name: "",
   });
 
-  const handleMouseEnter = (e, name) => {
-    setTooltip({ visible: true, x: e.clientX, y: e.clientY, name });
-  };
-
-  const handleMouseMove = (e) => {
-    setTooltip((prev) => ({ ...prev, x: e.clientX, y: e.clientY }));
-  };
-
-  const handleMouseLeave = () => {
-    setTooltip({ visible: false, x: 0, y: 0, name: "" });
-  };
-
   return (
     <React.Fragment>
       <motion.nav
@@ -45,8 +33,11 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
         <div className="m-10 flex items-center justify-center gap-4 text-2xl">
           <button
             onClick={toggleTheme}
-            className={`border-2 p-1 rounded bg-gray-500 bg-opacity-20 ${isDarkMode ? "border-white hover:bg-white hover:bg-opacity-30" : "border-black hover:bg-black hover:bg-opacity-30"
-              }`}
+            className={`border-2 p-1 rounded bg-gray-500 bg-opacity-20 ${
+              isDarkMode
+                ? "border-white hover:bg-white hover:bg-opacity-30"
+                : "border-black hover:bg-black hover:bg-opacity-30"
+            }`}
             data-tip="Toggle Theme"
           >
             {isDarkMode ? <MdLightMode /> : <MdDarkMode />}
@@ -65,11 +56,14 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
         className={`bg-red-400 fixed top-0 left-0 h-full w-44 shadow-lg`}
       >
         <div className="flex flex-col items-center justify-center h-full my-10 top:0">
-          <button onClick={toggleSidebar} className="text-2xl my-4" data-tip="Menu">
+          <button
+            onClick={toggleSidebar}
+            className="text-2xl my-4"
+            data-tip="Menu"
+          >
             {sidebarOpen ? <FaTimes /> : <FaBars />}
           </button>
-          <div className={`${isDarkMode ? "bg-black" : "bg-white"
-            } w-full`}>
+          <div className={`${isDarkMode ? "bg-black" : "bg-white"} w-full`}>
             <Link
               type="button"
               to="about-section"
@@ -80,7 +74,7 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
             >
               <motion.div
                 type="button"
-                className="border border-t-2 hover:border-2 border-gray-900 bg-red-400 w-full text-center"
+                className="border border-t-2 hover:border-2 border-gray-900 bg-red-400 w-full text-center cursor-pointer"
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
                 style={{ transformOrigin: "left center" }}
@@ -101,7 +95,8 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
               className="w-full"
             >
               <motion.div
-                className="border hover:border-2 border-gray-900 bg-red-400 w-full text-center"
+                type="button"
+                className="border hover:border-2 border-gray-900 bg-red-400 w-full text-center cursor-pointer"
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
                 style={{ transformOrigin: "left center" }}
@@ -122,7 +117,7 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
               className="w-full"
             >
               <motion.div
-                className="border border-b-2 hover:border-2 border-gray-900 bg-red-400 w-full text-center"
+                className="border border-b-2 hover:border-2 border-gray-900 bg-red-400 w-full text-center cursor-pointer"
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
                 style={{ transformOrigin: "left center" }}
@@ -134,7 +129,8 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
                   Contact
                 </button>
               </motion.div>
-            </Link></div>
+            </Link>
+          </div>
           <div className="bg-red-400 flex text-2xl gap-4 my-4">
             <a
               type="button"
@@ -177,8 +173,11 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
           <div className="bg-red-400 mt-auto mb-14">
             <button
               onClick={toggleTheme}
-              className={`border-2 p-1 rounded bg-gray-500 bg-opacity-20 ${isDarkMode ? "border-white hover:bg-white hover:bg-opacity-30" : "border-black hover:bg-black hover:bg-opacity-30"
-                }`}
+              className={`border-2 p-1 rounded bg-gray-500 bg-opacity-20 ${
+                isDarkMode
+                  ? "border-white hover:bg-white hover:bg-opacity-30"
+                  : "border-black hover:bg-black hover:bg-opacity-30"
+              }`}
               data-tip="Light/Dark Mode"
             >
               {isDarkMode ? <MdLightMode /> : <MdDarkMode />}
