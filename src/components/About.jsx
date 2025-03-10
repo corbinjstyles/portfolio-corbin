@@ -10,9 +10,10 @@ const About = ({ isDarkMode }) => {
     <React.Fragment>
       <Element id="about-section">
         <div className="border-b border-neutral-900">
-          <h1 className="mt-10 text-pink-500 text-center text-4xl">
+          <h1 className={`pb-1 font-medium text-6xl text-center lg:mt-10 ${isDarkMode ? "text-white" : "text-black"
+            }`}>
             About
-            <span className="text-neutral-500"> Me</span>
+            <span className="text-red-500"> Me</span>
           </h1>
           <div className="flex flex-wrap">
             <motion.div
@@ -28,13 +29,13 @@ const About = ({ isDarkMode }) => {
                   have continued to learn more about the industry while networking with others.
                   Each project I've worked on has always taught me something new and continues to build more
                   and more excitement that revolves around it!
-                  <br/><br/>
+                  <br /><br />
                   With 3 years of professional experience, I have worked with a variety of technologies,
                   including ReactJS, MySQL, Spring Boot, AngularTS, and MongoDB.
                   I started growing an interest with web development and software engineering when
-                  I worked on a fresher project with HCLTech with a few co-workers. 
+                  I worked on a fresher project with HCLTech with a few co-workers.
                   It gave me a hunger for technical work in hopes to providing cutting edge solutions that leverage business growth.
-                  <br/><br/>
+                  <br /><br />
                   Outside of work, I enjoy running and going to the gym, being an avid and competitive gamer on every game I touch,
                   watching sports, and hanging with friends. I am always eager to learn new technologies and take on new challenges.
                 </p>

@@ -43,7 +43,7 @@ const Contact = ({ isDarkMode }) => {
             initial={{ y: "200%" }}
             transition={{ ease: [0.455, 0.03, 0.515, 0.955], duration: 1 }}
             animate={{ y: 0 }}
-            className={`my-10 ${isDarkMode ? "text-white" : "text-black"} text-center text-4xl`}
+            className={`my-10 ${isDarkMode ? "text-white" : "text-black"} text-center font-medium text-5xl`}
           >
             Contact Me!
           </motion.h3>
@@ -77,7 +77,7 @@ const Contact = ({ isDarkMode }) => {
             </motion.div>
           ) : (
             <form method="POST" action="" ref={form} onSubmit={sendEmail}>
-              <div className="mx-auto rounded-xl max-w-xl bg-gray-800 p-5">
+              <div className={`mx-auto border rounded-xl ${isDarkMode ? "bg-gray-800" : "bg-gray-200"} p-5`}>
                 <div className="grid grid-cols-1 gap-6 label">
                   <div className="flex">
                     <label htmlFor="firstName" className="">
@@ -87,7 +87,7 @@ const Contact = ({ isDarkMode }) => {
                         name="firstName"
                         required="required"
                         placeholder="First Name"
-                        className="w-full block rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400"
+                        className={`w-full block rounded-md ${isDarkMode ? "bg-black-800" : "bg-white-800"} px-3.5 py-2 text-base text-gray-900 outline outline-1 outline-gray-300 placeholder:text-gray-400`}
                       />
                     </label>
                     <label htmlFor="lastName">
@@ -97,7 +97,7 @@ const Contact = ({ isDarkMode }) => {
                         name="lastName"
                         required="required"
                         placeholder="Last Name"
-                        className="w-full block rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400"
+                        className={`w-full block rounded-md ${isDarkMode ? "bg-black-800" : "bg-white-800"} px-3.5 py-2 text-base text-gray-900 outline outline-1 outline-gray-300 placeholder:text-gray-400`}
                       />
                     </label>
                   </div>
@@ -109,7 +109,7 @@ const Contact = ({ isDarkMode }) => {
                       placeholder="Email"
                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                       required="required"
-                      className="w-full block rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600"
+                      className={`w-full block rounded-md ${isDarkMode ? "bg-black-800" : "bg-white-800"} px-3.5 py-2 text-base text-gray-900 outline outline-1 outline-gray-300 placeholder:text-gray-400`}
                     />
                   </label>
 
@@ -161,10 +161,10 @@ const Contact = ({ isDarkMode }) => {
                   </label>
                   <div className="text-center">
                     <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.9 }}
+                      whileHover={{ scale: 1.03 }}
+                      whileTap={{ scale: 0.98 }}
                       type="submit"
-                      className="text-sm tracking-wide bg-indigo-500 text-gray-100 hover:bg-indigo-300 hover:text-neutral-800 p-3 rounded-lg w-full"
+                      className={`text-sm  ${isDarkMode ? "bg-indigo-500 text-white hover:bg-indigo-300 hover:text-neutral-800" : "bg-blue-400 text-white hover:bg-blue-300 hover:text-neutral-800"} p-3 rounded-lg w-full`}
                     >
                       Send
                     </motion.button>

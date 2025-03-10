@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
-import profilePic from "../assets/pfp.jpg";
+import vancouverPic from "../assets/vancouver_pic.jpg";
 import { motion } from "framer-motion";
 
 const Hero = ({ isDarkMode }) => {
-  const HERO_CONTENT = `Welcome to my portfolio!`;
+  const HERO_CONTENT = `Welcome to my portfolio! The main purpose for creating this webpage is to document skills and experiences 
+    that I've attained throughout my career while also sandboxing new code and features for showcasing web development. 
+    --My goal for this portfolio is to provide a clean and user-friendly experience for visitors to navigate through. 
+    --If you'd like to network with me or collaborate for any project, then feel free to email me at the bottom of the page or reach out to me on LinkedIn!
+    Appreciate you for stopping by! =)`;
   const typingText = ["Software Developer", "Web Developer", "Tech Enthusiast"];
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -47,6 +51,7 @@ const Hero = ({ isDarkMode }) => {
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
+              // lg:text-8xl is for large screen dimensions, otherwise text-6xl
               className={`pb-1 text-6xl lg:mt-10 lg:text-8xl ${isDarkMode ? "text-white" : "text-black"
                 }`}
             >
@@ -89,7 +94,7 @@ const Hero = ({ isDarkMode }) => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.25 }}
               className="rounded"
-              src={profilePic}
+              src={vancouverPic}
               alt="Corbin Styles"
             />
           </div>

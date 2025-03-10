@@ -37,7 +37,7 @@ const Technologies = ({ isDarkMode }) => {
     },
     {
       name: "TailwindCSS",
-      icon: <RiTailwindCssFill className="text-5xl text-blue-400" />,
+      icon: <RiTailwindCssFill className="text-5xl text-teal-400" />,
     },
     {
       name: "Visual Studio",
