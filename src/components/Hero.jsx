@@ -46,8 +46,27 @@ const Hero = ({ isDarkMode }) => {
     return () => clearTimeout(timer);
   }, [currentText, isDeleting, typingSpeed, loopNum, typingText, currentIndex]);
 
+  const cursorStyle = {
+    fontWeight: 100,
+    fontSize: "30px",
+    color: isDarkMode ? "white" : "black",
+    animation: "blink 1s step-end infinite"
+  };
+
+  const keyframesStyle = `
+    @keyframes blink {
+      from, to {
+        color: transparent;
+      }
+      50% {
+        color: ${isDarkMode ? "white" : "black"};
+      }
+    }
+  `;
+
   return (
     <div className={`border-b ${isDarkMode ? "border-neutral-900" : "border-neutral-200"} pb-4 lg:mb-35`}>
+      <style>{keyframesStyle}</style>
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2">
           <div className="flex flex-col items-center lg:items-start">
@@ -71,14 +90,11 @@ const Hero = ({ isDarkMode }) => {
               STYLES
             </motion.h1>
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 3.5 }}
               className="text-4xl font-mono mt-4"
             >
               <span className={`${isDarkMode ? "text-white" : "text-black"}`}>
-                &gt; {currentText}
-                <span className="blinking-cursor">|</span>
+                &gt;{currentText}
+                <span className="">_</span>
               </span>
             </motion.div>
             <motion.p

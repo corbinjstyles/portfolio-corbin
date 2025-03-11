@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import utsaLogo from "../assets/utsa.png"; // Add the path to the UTSA logo
 import hcltechLogo from "../assets/hcltech.png"; // Add the path to the HCLTech logo
 
+
 const Experience = ({ isDarkMode }) => {
   const EXPERIENCES = [
     {
@@ -54,7 +55,7 @@ const Experience = ({ isDarkMode }) => {
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.5 }}
-              className={`mb-8 flex flex-wrap lg:justify-center border-4 p-4 rounded-lg ${isDarkMode ? "bg-white border-white" : "bg-black border-black"} bg-opacity-50`}
+              className={`mb-8 flex flex-wrap lg:mx-44 lg:justify-center border-4 p-4 rounded-lg ${isDarkMode ? "bg-white border-white" : "bg-black border-black"} bg-opacity-50`}
             >
               <div className="w-full max-w-xl lg:w-3/4 flex items-center">
                 <img
@@ -69,8 +70,8 @@ const Experience = ({ isDarkMode }) => {
                   <h2 className= {`text-white`}>{experience.description}</h2>
                 </div>
               </div>
-              <div className="w-full lg:w-1/4">
-                <p className={`mb-2 text-sm text-white text-right`}>
+              <div className="w-full lg:w-1/4 text-right">
+                <p className={`mb-2 text-sm text-white `}>
                   {experience.year}
                 </p>
               </div>
