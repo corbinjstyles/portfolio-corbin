@@ -4,15 +4,12 @@ import { motion } from "framer-motion";
 
 const Hero = ({ isDarkMode }) => {
   const HERO_CONTENT = `Welcome to my portfolio! 
-    The main purpose for creating this webpage is to 
-    document skills and experiences that I've attained throughout my career. 
-    Also like to use this website as a sandbox for new code and features to showcase 
-    my web development skills in hopes to provide more clean and user-friendly 
-    experiences for visitors of webpages I create. 
-    If you'd have any questions, feel free to email me at the bottom of the page!
+    My main purpose in creating this webpage is to 
+    document skills and experiences that I've attained throughout my career.  
+    If you'd have any questions about me, feel free to email me at the bottom of the page!
     If you'd like to network with me, feel free to reach out to me via LinkedIn!
     Cheers!`;
-  const typingText = ["Software Developer", "Web Developer", "Tech Enthusiast"];
+  const typingText = ["Software Developer", "Open to Work", "Distance Runner", "Avid Gamer"];
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -94,17 +91,17 @@ const Hero = ({ isDarkMode }) => {
             >
               <span className={`${isDarkMode ? "text-white" : "text-black"}`}>
                 &gt;{currentText}
-                <span className="">_</span>
+                <span className="">|</span>
               </span>
             </motion.div>
-            <motion.p
+            {/* <motion.p
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 1.5 }}
               className={`mt-10 ${isDarkMode ? "text-white" : "text-black"}`}
             >
               {HERO_CONTENT}&#128578;
-            </motion.p>
+            </motion.p> */}
           </div>
         </div>
         <div className="w-full lg:w-1/2 lg:p-8">

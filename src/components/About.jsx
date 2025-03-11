@@ -2,9 +2,31 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Element } from "react-scroll";
 import Technologies from "./Technologies";
+import { FaRunning } from "react-icons/fa";
+import { GiConsoleController } from "react-icons/gi";
+import { HiOutlineBookOpen } from "react-icons/hi";
+import { IoMdAirplane } from "react-icons/io";
 
 const About = ({ isDarkMode }) => {
-  const ABOUT_TEXT = ``;
+
+  const hobbies = [
+    {
+      name: "Running",
+      icon: <FaRunning className={`text-5xl ${isDarkMode ? "text-white" : "text-black"}`} />
+    }, {
+      name: "Gaming",
+      icon: <GiConsoleController className={`text-5xl ${isDarkMode ? "text-white" : "text-black"}`} />
+
+    }, {
+      name: "Reading",
+      icon: <HiOutlineBookOpen className={`text-5xl ${isDarkMode ? "text-white" : "text-black"}`} />
+
+    }, {
+      name: "Traveling",
+      icon: <IoMdAirplane className={`text-5xl ${isDarkMode ? "text-white" : "text-black"}`}/>
+      
+    }
+  ];
 
   return (
     <React.Fragment>
@@ -28,7 +50,7 @@ const About = ({ isDarkMode }) => {
                   I've worked with many people in the past both in school and in the marketplace and
                   have continued to learn more about the industry while networking with others.
                   Each project I've worked on has always taught me something new and continues to build more
-                  and more excitement that revolves around it!
+                  and more excitement for the challenges that revolve around it.
                   <br /><br />
                   With 3 years of professional experience, I have worked with a variety of technologies,
                   including ReactJS, MySQL, Spring Boot, AngularTS, and MongoDB.
@@ -49,6 +71,9 @@ const About = ({ isDarkMode }) => {
             >
               <div className="flex justify-center">
                 <Technologies isDarkMode={isDarkMode} />
+              </div>
+              <div className="flex justify-center">
+
               </div>
             </motion.div>
           </div>
