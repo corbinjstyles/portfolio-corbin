@@ -9,7 +9,7 @@ const Hero = ({ isDarkMode }) => {
     If you'd have any questions about me, feel free to email me at the bottom of the page!
     If you'd like to network with me, feel free to reach out to me via LinkedIn!
     Cheers!`;
-  const typingText = ["Software Developer", "Open to Work", "Distance Runner", "Avid Gamer"];
+  const typingText = ["Software Developer", "Open to Work"];
   const [currentText, setCurrentText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -62,7 +62,7 @@ const Hero = ({ isDarkMode }) => {
   `;
 
   return (
-    <div className={`border-b ${isDarkMode ? "border-neutral-900" : "border-neutral-200"} pb-4 lg:mb-35`}>
+    <div className={`border-b ${isDarkMode ? "border-neutral-900" : "border-neutral-200"} pb-4 pt-20 mt-8 lg:mb-35`}>
       <style>{keyframesStyle}</style>
       <div className="flex flex-wrap">
         <div className="w-full lg:w-1/2">
@@ -72,7 +72,7 @@ const Hero = ({ isDarkMode }) => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
               // lg:text-8xl is for large screen dimensions, otherwise text-6xl
-              className={`pb-1 text-6xl lg:mt-10 lg:text-8xl ${isDarkMode ? "text-white" : "text-black"
+              className={`pb-1 pt-10 text-6xl lg:mt-10 lg:text-8xl ${isDarkMode ? "text-white" : "text-black"
                 }`}
             >
               CORBIN

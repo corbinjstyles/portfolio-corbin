@@ -46,7 +46,7 @@ const Experience = ({ isDarkMode }) => {
   ];
 
   return (
-    <div id="ex-section">
+    <div id="experience-section">
         <h2 className={`my-10 ${isDarkMode ? "text-white" : "text-black"} text-center font-medium text-5xl`}>Experience</h2>
         <div className={`border-b ${isDarkMode ? "border-neutral-900" : "border-neutral-200"}`}>
           {EXPERIENCES.map((experience, index) => (

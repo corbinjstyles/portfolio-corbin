@@ -18,6 +18,18 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
     name: "",
   });
 
+  const handleMouseEnter = (e, name) => {
+    setTooltip({ visible: true, x: e.clientX, y: e.clientY, name });
+  };
+
+  const handleMouseMove = (e) => {
+    setTooltip((prev) => ({ ...prev, x: e.clientX, y: e.clientY }));
+  };
+
+  const handleMouseLeave = () => {
+    setTooltip({ visible: false, x: 0, y: 0, name: "" });
+  };
+
   return (
     <React.Fragment>
       <motion.nav
@@ -25,19 +37,17 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
         initial={{ opacity: 0, x: 100 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         viewport={{ once: true }}
-        className="rounded-l flex-row bg-red-400 mb-5 flex ml-20 mt-12 items-center justify-between py-1"
+        className={`fixed top-0 ${sidebarOpen ? 'left-5' : 'left-10'} right-0 z-50 rounded-l flex-row bg-red-400 mb-5 flex items-center justify-between py-1 ${sidebarOpen ? 'ml-44' : 'ml-10'}`}
+        // style={{ width: sidebarOpen ? "-calc(100%)" : "-calc(100%)" }}
       >
         <div className="flex flex-shrink-0 items-center">
           <motion.b className="mx-4 text-4xl bold">CS</motion.b>
         </div>
-        <div className="m-10 flex items-center justify-center gap-4 text-2xl">
+        <div className="m-8 flex items-center justify-center gap-4 text-2xl">
           <button
             onClick={toggleTheme}
-            className={`border-2 p-1 rounded bg-gray-500 bg-opacity-20 ${
-              isDarkMode
-                ? "border-white hover:bg-white hover:bg-opacity-30"
-                : "border-black hover:bg-black hover:bg-opacity-30"
-            }`}
+            className={`border-2 p-1 rounded bg-gray-500 bg-opacity-20 ${isDarkMode ? "border-white hover:bg-white hover:bg-opacity-30" : "border-black hover:bg-black hover:bg-opacity-30"
+              }`}
             data-tip="Toggle Theme"
           >
             {isDarkMode ? <MdLightMode /> : <MdDarkMode />}
@@ -56,11 +66,7 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
         className={`bg-red-400 fixed top-0 left-0 h-full w-44 shadow-lg`}
       >
         <div className="flex flex-col items-center justify-center h-full my-10 top:0">
-          <button
-            onClick={toggleSidebar}
-            className="text-2xl my-4"
-            data-tip="Menu"
-          >
+          <button onClick={toggleSidebar} className="text-2xl my-4" data-tip="Menu">
             {sidebarOpen ? <FaTimes /> : <FaBars />}
           </button>
           <div className={`${isDarkMode ? "bg-black" : "bg-white"} w-full`}>
@@ -69,13 +75,14 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
               to="about-section"
               spy={true}
               smooth={true}
-              duration={500}
+              duration={300}
+              offset={-120}
               className="w-full"
             >
               <motion.div
                 type="button"
-                className="border border-t-2 hover:border-2 border-gray-900 bg-red-400 w-full text-center cursor-pointer"
-                whileHover={{ scale: 1.2 }}
+                className="border border-t-2 hover:border-2 border-gray-900 bg-red-400 w-full text-center cursor-pointer transition-all duration-100 ease-in-out hover:w-full"
+                whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 style={{ transformOrigin: "left center" }}
               >
@@ -88,16 +95,17 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
               </motion.div>
             </Link>
             <Link
-              to="ex-section"
+              to="experience-section"
               spy={true}
               smooth={true}
-              duration={500}
+              duration={300}
+              offset={-120}
               className="w-full"
             >
               <motion.div
                 type="button"
-                className="border hover:border-2 border-gray-900 bg-red-400 w-full text-center cursor-pointer"
-                whileHover={{ scale: 1.2 }}
+                className="border hover:border-2 border-gray-900 bg-red-400 w-full text-center cursor-pointer transition-all duration-100 ease-in-out hover:w-full"
+                whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 style={{ transformOrigin: "left center" }}
               >
@@ -113,12 +121,13 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
               to="contact"
               spy={true}
               smooth={true}
-              duration={500}
+              duration={300}
+              offset={-120}
               className="w-full"
             >
               <motion.div
-                className="border border-b-2 hover:border-2 border-gray-900 bg-red-400 w-full text-center cursor-pointer"
-                whileHover={{ scale: 1.2 }}
+                className="border border-b-2 hover:border-2 border-gray-900 bg-red-400 w-full text-center cursor-pointer transition-all duration-100 ease-in-out hover:w-full"
+                whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 style={{ transformOrigin: "left center" }}
               >
@@ -140,6 +149,7 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
+                className="cursor-pointer"
               >
                 <FaLinkedin />
               </motion.button>
@@ -152,6 +162,7 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
+                className="cursor-pointer"
               >
                 <FaGithub />
               </motion.button>
@@ -164,6 +175,7 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
+                className="cursor-pointer"
               >
                 <FaFileAlt />
               </motion.button>
@@ -173,11 +185,8 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
           <div className="bg-red-400 mt-auto mb-14">
             <button
               onClick={toggleTheme}
-              className={`border-2 p-1 rounded bg-gray-500 bg-opacity-20 ${
-                isDarkMode
-                  ? "border-white hover:bg-white hover:bg-opacity-30"
-                  : "border-black hover:bg-black hover:bg-opacity-30"
-              }`}
+              className={`border-2 p-1 rounded bg-gray-500 bg-opacity-20 ${isDarkMode ? "border-white hover:bg-white hover:bg-opacity-30" : "border-black hover:bg-black hover:bg-opacity-30"
+                }`}
               data-tip="Light/Dark Mode"
             >
               {isDarkMode ? <MdLightMode /> : <MdDarkMode />}

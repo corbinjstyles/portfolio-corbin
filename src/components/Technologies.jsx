@@ -104,7 +104,7 @@ const Technologies = ({ isDarkMode }) => {
               initial={{ opacity: 0, y: -100 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.1 }}
-              className={`relative group rounded-2xl border-2 ${isDarkMode ? "border-neutral-400" : "border-neutral-600"} p-4`}
+              className={`relative group rounded-2xl ${isDarkMode ? "border-neutral-400" : "border-neutral-600"} p-4`}
               onMouseEnter={(e) => handleMouseEnter(e, tech.name)}
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
