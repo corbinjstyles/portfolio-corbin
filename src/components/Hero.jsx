@@ -72,7 +72,7 @@ const Hero = ({ isDarkMode }) => {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
               // lg:text-8xl is for large screen dimensions, otherwise text-6xl
-              className={`pb-1 pt-10 text-6xl lg:mt-10 lg:text-8xl ${isDarkMode ? "text-white" : "text-black"
+              className={`pb-1 pt-10 text-5xl lg:mt-10 lg:text-8xl ${isDarkMode ? "text-white" : "text-black"
                 }`}
             >
               CORBIN
@@ -81,13 +81,13 @@ const Hero = ({ isDarkMode }) => {
               initial={{ x: -100, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.5, delay: 1 }}
-              className={`pb-16 text-6xl flex lg:text-8xl ${isDarkMode ? "text-white" : "text-black"
+              className={`pb-16 text-5xl flex lg:text-8xl ${isDarkMode ? "text-white" : "text-black"
                 }`}
             >
               STYLES
             </motion.h1>
             <motion.div
-              className="text-4xl font-mono mt-4"
+              className="text-3xl lg:text-4xl font-mono mt-4"
             >
               <span className={`${isDarkMode ? "text-white" : "text-black"}`}>
                 &gt;{currentText}

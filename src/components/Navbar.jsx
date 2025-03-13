@@ -37,23 +37,34 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
         initial={{ opacity: 0, x: 100 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         viewport={{ once: true }}
-        className={`fixed top-0 ${sidebarOpen ? 'left-5' : 'left-10'} right-0 z-50 rounded-l flex-row bg-red-400 mb-5 flex items-center justify-between py-1 ${sidebarOpen ? 'ml-44' : 'ml-10'}`}
+        className={`fixed top-0 ${
+          sidebarOpen ? "left-5" : "left-10"
+        } right-0 z-50 rounded-l flex-row bg-red-400 mb-5 flex items-center justify-between py-1 ${
+          sidebarOpen ? "ml-44" : "ml-0"
+        }`}
         // style={{ width: sidebarOpen ? "-calc(100%)" : "-calc(100%)" }}
       >
         <div className="flex flex-shrink-0 items-center">
+          <button
+            onClick={toggleSidebar}
+            className="pl-4 text-2xl"
+            data-tip="Menu"
+          >
+            {sidebarOpen ? <FaTimes /> : <FaBars />}
+          </button>
           <motion.b className="mx-4 text-4xl bold">CS</motion.b>
         </div>
         <div className="m-8 flex items-center justify-center gap-4 text-2xl">
           <button
             onClick={toggleTheme}
-            className={`border-2 p-1 rounded bg-gray-500 bg-opacity-20 ${isDarkMode ? "border-white hover:bg-white hover:bg-opacity-30" : "border-black hover:bg-black hover:bg-opacity-30"
-              }`}
+            className={`border-2 p-1 rounded bg-gray-500 bg-opacity-20 ${
+              isDarkMode
+                ? "border-white hover:bg-white hover:bg-opacity-30"
+                : "border-black hover:bg-black hover:bg-opacity-30"
+            }`}
             data-tip="Toggle Theme"
           >
             {isDarkMode ? <MdLightMode /> : <MdDarkMode />}
-          </button>
-          <button onClick={toggleSidebar} className="text-2xl" data-tip="Menu">
-            {sidebarOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>
       </motion.nav>
@@ -66,9 +77,7 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
         className={`bg-red-400 fixed top-0 left-0 h-full w-44 shadow-lg`}
       >
         <div className="flex flex-col items-center justify-center h-full my-10 top:0">
-          <button onClick={toggleSidebar} className="text-2xl my-4" data-tip="Menu">
-            {sidebarOpen ? <FaTimes /> : <FaBars />}
-          </button>
+          <motion.b className="mx-4 text-4xl bold">CS</motion.b>
           <div className={`${isDarkMode ? "bg-black" : "bg-white"} w-full`}>
             <Link
               type="button"
@@ -185,8 +194,11 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
           <div className="bg-red-400 mt-auto mb-14">
             <button
               onClick={toggleTheme}
-              className={`border-2 p-1 rounded bg-gray-500 bg-opacity-20 ${isDarkMode ? "border-white hover:bg-white hover:bg-opacity-30" : "border-black hover:bg-black hover:bg-opacity-30"
-                }`}
+              className={`border-2 p-1 rounded bg-gray-500 bg-opacity-20 ${
+                isDarkMode
+                  ? "border-white hover:bg-white hover:bg-opacity-30"
+                  : "border-black hover:bg-black hover:bg-opacity-30"
+              }`}
               data-tip="Light/Dark Mode"
             >
               {isDarkMode ? <MdLightMode /> : <MdDarkMode />}

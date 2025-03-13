@@ -6,6 +6,7 @@ import { FaRunning } from "react-icons/fa";
 import { GiConsoleController } from "react-icons/gi";
 import { HiOutlineBookOpen } from "react-icons/hi";
 import { IoMdAirplane } from "react-icons/io";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const About = ({ isDarkMode }) => {
   const hobbies = [
@@ -52,16 +53,52 @@ const About = ({ isDarkMode }) => {
           }`}
         >
           <h1
-            className={`pb-1 font-medium text-6xl text-center lg:mt-10 ${
+            className={`text-4xl pb-1 font-medium lg:text-6xl text-center lg:mt-10 ${
               isDarkMode ? "text-white" : "text-black"
             }`}
           >
             About
             <span className="text-red-500"> Me</span>
           </h1>
-          <div className={`flex flex-wrap border-b ${
-            isDarkMode ? "border-neutral-900" : "border-neutral-200"
-          }`}>
+          <div className="flex items-center gap-4 justify-center">
+            <a
+              href="https://www.linkedin.com/in/corbinstyles/"
+              className={`flex items-center border-2 rounded-lg p-2 mt-4 mb-8 ${
+                isDarkMode ? "text-white" : "text-black"
+              }`}
+            >
+              <FaLinkedin className="text-3xl" />
+              <p
+                className={`text-md pl-2 ${
+                  isDarkMode ? "text-white" : "text-black"
+                }`}
+              >
+                LinkedIn
+              </p>
+            </a>
+            <a
+              href="https://github.com/corbinjstyles"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`flex items-center border-2 rounded-lg p-2 mt-4 mb-8 ${
+                isDarkMode ? "text-white" : "text-black"
+              }`}
+            >
+              <FaGithub className="text-3xl" />
+              <p
+                className={`text-md pl-2 ${
+                  isDarkMode ? "text-white" : "text-black"
+                }`}
+              >
+                Github
+              </p>
+            </a>
+          </div>
+          <div
+            className={`flex flex-wrap border-b ${
+              isDarkMode ? "border-neutral-900" : "border-neutral-200"
+            }`}
+          >
             <motion.div
               whileInView={{ opacity: 1, x: 1 }}
               initial={{ opacity: 0, x: -100 }}
@@ -86,10 +123,10 @@ const About = ({ isDarkMode }) => {
                   With my professional experience, I have worked with a variety
                   of technologies, including ReactJS, MySQL, Spring Boot,
                   AngularTS, and MongoDB. I started growing an interest with web
-                  software engineering when I worked on a fresher project with 
-                  HCLTech with a few co-workers. It gave me
-                  a hunger for technical work in hopes to providing cutting edge
-                  solutions that leverage business growth.
+                  software engineering when I worked on a fresher project with
+                  HCLTech with a few co-workers. It gave me a hunger for
+                  technical work in hopes to providing cutting edge solutions
+                  that leverage business growth.
                 </p>
               </div>
             </motion.div>
@@ -105,7 +142,7 @@ const About = ({ isDarkMode }) => {
             </motion.div>
             <motion.div
               whileInView={{ opacity: 1, x: 1 }}
-              initial={{ opacity: 0, x: 100 }}
+              initial={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.5 }}
               className="w-full lg:w-1/2 lg:p-4"
             >
@@ -114,10 +151,12 @@ const About = ({ isDarkMode }) => {
                   className={`my-2 text-md py-4 ${
                     isDarkMode ? "text-white" : "text-black"
                   }`}
-                >Outside of work, I enjoy running and going to the gym, being
-                an avid and competitive gamer on every game I touch, watching
-                sports, and hanging with friends. I am always eager to learn
-                new technologies and take on new challenges.</p>
+                >
+                  Outside of work, I enjoy running and going to the gym, being
+                  an avid and competitive gamer on every game I touch, watching
+                  sports, and hanging with friends. I am always eager to learn
+                  new technologies and take on new challenges.
+                </p>
               </div>
             </motion.div>
             <motion.div
@@ -137,9 +176,7 @@ const About = ({ isDarkMode }) => {
                       } p-4`}
                     >
                       {hobby.icon}
-                      <motion.div
-                        className="absolute bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-sm rounded px-1 py-1"
-                      >
+                      <motion.div className="absolute bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-sm rounded px-1 py-1">
                         {hobby.name}
                       </motion.div>
                     </motion.div>

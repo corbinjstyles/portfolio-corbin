@@ -64,24 +64,12 @@ const Technologies = ({ isDarkMode }) => {
     },
   ];
 
-  const [tooltip, setTooltip] = useState({
+  const [tooltip] = useState({
     visible: false,
     x: 0,
     y: 0,
     name: "",
   });
-
-  const handleMouseEnter = (e, name) => {
-    setTooltip({ visible: true, x: e.clientX, y: e.clientY, name });
-  };
-
-  const handleMouseMove = (e) => {
-    setTooltip((prev) => ({ ...prev, x: e.clientX, y: e.clientY }));
-  };
-
-  const handleMouseLeave = () => {
-    setTooltip({ visible: false, x: 0, y: 0, name: "" });
-  };
 
   return (
     <React.Fragment>
@@ -104,10 +92,7 @@ const Technologies = ({ isDarkMode }) => {
               initial={{ opacity: 0, y: -100 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.1 }}
-              className={`relative group rounded-2xl ${isDarkMode ? "border-neutral-400" : "border-neutral-600"} p-4`}
-              onMouseEnter={(e) => handleMouseEnter(e, tech.name)}
-              onMouseMove={handleMouseMove}
-              onMouseLeave={handleMouseLeave}
+              className={`relative group p-4`}
             >
               {tech.icon}
               <motion.div

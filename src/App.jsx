@@ -26,7 +26,7 @@ const App = () => {
     <React.Fragment>
       <div
         className={`overflow-x-hidden overflow-y-hidden antialiased selection:bg-white-300 selection:text-white-900 ${
-          sidebarOpen ? "ml-44" : ""
+          sidebarOpen ? "ml-44" : "ml-0"
         } ${isDarkMode ? "text-neutral-900 bg-black" : "text-black bg-white"}`} // Apply theme classes
       >
         <div className="fixed top-0 -z-10 h-full w-full">
