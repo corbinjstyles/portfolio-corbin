@@ -90,7 +90,7 @@ const About = ({ isDarkMode }) => {
                   isDarkMode ? "text-white" : "text-black"
                 }`}
               >
-                Github
+                GitHub
               </p>
             </a>
           </div>

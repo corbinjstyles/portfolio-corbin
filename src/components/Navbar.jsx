@@ -11,24 +11,6 @@ import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 
 const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
-  const [tooltip, setTooltip] = useState({
-    visible: false,
-    x: 0,
-    y: 0,
-    name: "",
-  });
-
-  const handleMouseEnter = (e, name) => {
-    setTooltip({ visible: true, x: e.clientX, y: e.clientY, name });
-  };
-
-  const handleMouseMove = (e) => {
-    setTooltip((prev) => ({ ...prev, x: e.clientX, y: e.clientY }));
-  };
-
-  const handleMouseLeave = () => {
-    setTooltip({ visible: false, x: 0, y: 0, name: "" });
-  };
 
   return (
     <React.Fragment>
@@ -38,7 +20,7 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
         transition={{ duration: 0.5, ease: "easeInOut" }}
         viewport={{ once: true }}
         className={`fixed top-0 ${
-          sidebarOpen ? "left-5" : "left-10"
+          sidebarOpen ? "left-4" : "left-0"
         } right-0 z-50 rounded-l flex-row bg-red-400 mb-5 flex items-center justify-between py-1 ${
           sidebarOpen ? "ml-44" : "ml-0"
         }`}
@@ -190,7 +172,6 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
               </motion.button>
             </a>
           </div>
-
           <div className="bg-red-400 mt-auto mb-14">
             <button
               onClick={toggleTheme}
