@@ -22,7 +22,7 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
         className={`fixed top-0 ${
           sidebarOpen ? "left-4" : "left-0"
         } right-0 z-50 rounded-l flex-row bg-red-400 mb-5 flex items-center justify-between py-1 ${
-          sidebarOpen ? "ml-44" : "ml-0"
+          sidebarOpen ? "ml-44" : "ml-10"
         }`}
         // style={{ width: sidebarOpen ? "-calc(100%)" : "-calc(100%)" }}
       >
