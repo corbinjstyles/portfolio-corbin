@@ -89,10 +89,10 @@ const Hero = ({ isDarkMode }) => {
             <motion.div
               className="text-3xl lg:text-4xl font-mono mt-4"
             >
-              <span className={`${isDarkMode ? "text-white" : "text-black"}`}>
+              {/* <span className={`${isDarkMode ? "text-white" : "text-black"}`}>
                 &gt;{currentText}
                 <span className="">|</span>
-              </span>
+              </span> */}
             </motion.div>
             {/* <motion.p
               initial={{ y: 100, opacity: 0 }}

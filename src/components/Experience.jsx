@@ -2,10 +2,21 @@ import React from "react";
 import { motion } from "framer-motion";
 import utsaLogo from "../assets/utsa.png"; // Add the path to the UTSA logo
 import hcltechLogo from "../assets/hcltech.png"; // Add the path to the HCLTech logo
+import tapfcuLogo from "../assets/tapfcu.png"; // Add the path to the TAPFCU logo
 import { FaFileAlt } from "react-icons/fa";
 
 const Experience = ({ isDarkMode }) => {
   const EXPERIENCES = [
+    {
+      year: "Mar 2025 - Present",
+      role: "Tech & Comp Specialist",
+      company: "Texas Associations of Professionals Federal Credit Union",
+      description: `Provided technical support and assistance to credit union members and staff.
+        Handled vendor management storage and documentation. Updated and wrote policies and procedures
+        for the IT department to ensure compliance and efficiency.`,
+      technologies: ["SharePoint", "MSP", "HTML"],
+      logo: tapfcuLogo,
+    },
     {
       year: "Jan 2022 - Jun 2024",
       role: "Digital Consultant",
