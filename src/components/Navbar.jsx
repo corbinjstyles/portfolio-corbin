@@ -19,12 +19,10 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
         initial={{ opacity: 0, x: 100 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
         viewport={{ once: true }}
-        className={`fixed top-0 ${
-          sidebarOpen ? "left-4" : "left-0"
-        } right-0 z-50 rounded-l flex-row bg-red-400 mb-5 flex items-center justify-between py-1 ${
-          sidebarOpen ? "ml-44" : "ml-10"
-        }`}
-        // style={{ width: sidebarOpen ? "-calc(100%)" : "-calc(100%)" }}
+        className={`fixed top-0 ${sidebarOpen ? "left-4" : "left-0"
+          } right-0 z-50 rounded-l flex-row bg-red-400 mb-5 flex items-center justify-between py-1 ${sidebarOpen ? "ml-44" : "ml-10"
+          }`}
+      // style={{ width: sidebarOpen ? "-calc(100%)" : "-calc(100%)" }}
       >
         <div className="flex flex-shrink-0 items-center">
           <button
@@ -39,11 +37,10 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
         <div className="m-8 flex items-center justify-center gap-4 text-2xl">
           <button
             onClick={toggleTheme}
-            className={`border-2 p-1 rounded bg-gray-500 bg-opacity-20 ${
-              isDarkMode
-                ? "border-white hover:bg-white hover:bg-opacity-30"
-                : "border-black hover:bg-black hover:bg-opacity-30"
-            }`}
+            className={`border-2 p-1 rounded bg-gray-500 bg-opacity-20 ${isDarkMode
+              ? "border-white hover:bg-white hover:bg-opacity-30"
+              : "border-black hover:bg-black hover:bg-opacity-30"
+              }`}
             data-tip="Toggle Theme"
           >
             {isDarkMode ? <MdLightMode /> : <MdDarkMode />}
@@ -61,32 +58,28 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
         <div className="flex flex-col items-center justify-center h-full my-10 top:0">
           <motion.b className="mx-4 text-4xl bold">CS</motion.b>
           <div className={`${isDarkMode ? "bg-black" : "bg-white"} w-full`}>
-            <Link
-              type="button"
-              to="about-section"
-              spy={true}
-              smooth={true}
-              duration={300}
-              offset={-120}
-              className="w-full"
-            >
-              <motion.div
+              <Link
                 type="button"
-                className="bg-red-400 w-full text-center cursor-pointer transition-all duration-100 ease-in-out hover:w-full"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                style={{ transformOrigin: "center" }}
+                to="about-section"
+                spy={true}
+                smooth={true}
+                duration={300}
+                offset={-120}
+                className="w-full"
               >
-                <button
-                  className={`flex items-center border-2 rounded-lg p-2 mb-4 ${
-            isDarkMode ? "text-white" : "text-black"
-          }`}
+            <motion.div
+              className="bg-red-400 w-full text-center cursor-pointer transition-all duration-100 ease-in-out hover:w-full"
+              style={{ transformOrigin: "center" }}
+            >
+
+                <motion.button
+                  className={`w-full p-1 mt-4 text-2xl border-white hover:bg-white hover:bg-opacity-30`}
                   data-tip="About"
                 >
                   About
-                </button>
-              </motion.div>
-            </Link>
+                </motion.button>
+            </motion.div></Link>
+
             <Link
               to="experience-section"
               spy={true}
@@ -97,17 +90,15 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
             >
               <motion.div
                 type="button"
-                className="border hover:border-2 border-gray-900 bg-red-400 w-full text-center cursor-pointer transition-all duration-100 ease-in-out hover:w-full"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+                className="bg-red-400 w-full text-center cursor-pointer transition-all duration-100 ease-in-out hover:w-full"
                 style={{ transformOrigin: "left center" }}
               >
-                <button
-                  className="my-4 font-bold text-2xl text-center w-full"
+                <motion.button
+                  className={`w-full p-1 mt-4 text-2xl border-white hover:bg-white hover:bg-opacity-30`}
                   data-tip="Experience"
                 >
                   Experience
-                </button>
+                </motion.button>
               </motion.div>
             </Link>
             <Link
@@ -119,17 +110,15 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
               className="w-full"
             >
               <motion.div
-                className="border border-b-2 hover:border-2 border-gray-900 bg-red-400 w-full text-center cursor-pointer transition-all duration-100 ease-in-out hover:w-full"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
+                className="bg-red-400 w-full text-center cursor-pointer transition-all duration-100 ease-in-out hover:w-full"
                 style={{ transformOrigin: "left center" }}
               >
-                <button
-                  className="my-4 font-bold text-2xl text-center w-full"
+                <motion.button
+                  className={`w-full p-1 mt-4 text-2xl border-white hover:bg-white hover:bg-opacity-30`}
                   data-tip="Contact"
                 >
                   Contact
-                </button>
+                </motion.button>
               </motion.div>
             </Link>
           </div>
@@ -177,11 +166,10 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
           <div className="bg-red-400 mt-auto mb-14">
             <button
               onClick={toggleTheme}
-              className={`border-2 p-1 rounded bg-gray-500 bg-opacity-20 ${
-                isDarkMode
-                  ? "border-white hover:bg-white hover:bg-opacity-30"
-                  : "border-black hover:bg-black hover:bg-opacity-30"
-              }`}
+              className={`border-2 p-1 rounded bg-gray-500 bg-opacity-20 ${isDarkMode
+                ? "border-white hover:bg-white hover:bg-opacity-30"
+                : "border-black hover:bg-black hover:bg-opacity-30"
+                }`}
               data-tip="Light/Dark Mode"
             >
               {isDarkMode ? <MdLightMode /> : <MdDarkMode />}
