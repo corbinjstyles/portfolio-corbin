@@ -11,7 +11,7 @@ const Experience = ({ isDarkMode }) => {
       year: "Mar 2025 - Present",
       role: "Tech & Comp Specialist",
       company: "Texas Associations of Professionals Federal Credit Union",
-      description: `Provided technical support and assistance to credit union members and staff.
+      description: `Assisting technical support to credit union staff.
         Handled vendor management storage and documentation. Updated and wrote policies and procedures
         for the IT department to ensure compliance and efficiency.`,
       technologies: ["SharePoint", "MSP", "HTML"],

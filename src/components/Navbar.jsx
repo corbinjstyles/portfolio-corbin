@@ -72,13 +72,15 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
             >
               <motion.div
                 type="button"
-                className="border border-t-2 hover:border-2 border-gray-900 bg-red-400 w-full text-center cursor-pointer transition-all duration-100 ease-in-out hover:w-full"
+                className="bg-red-400 w-full text-center cursor-pointer transition-all duration-100 ease-in-out hover:w-full"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                style={{ transformOrigin: "left center" }}
+                style={{ transformOrigin: "center" }}
               >
                 <button
-                  className="my-4 font-bold text-2xl text-center w-full"
+                  className={`flex items-center border-2 rounded-lg p-2 mb-4 ${
+            isDarkMode ? "text-white" : "text-black"
+          }`}
                   data-tip="About"
                 >
                   About
