@@ -57,6 +57,7 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
       >
         <div className="flex flex-col items-center justify-center h-full my-10 top:0">
           <motion.b className="mx-4 text-4xl bold">CS</motion.b>
+          <div className={`w-full border-t border-neutral-600 my-2`} />
           <div className={`${isDarkMode ? "bg-black" : "bg-white"} w-full`}>
               <Link
                 type="button"
@@ -164,6 +165,7 @@ const Navbar = ({ toggleSidebar, sidebarOpen, toggleTheme, isDarkMode }) => {
             </a>
           </div>
           <div className="bg-red-400 mt-auto mb-14">
+            <div className={`w-full border-t border-neutral-600 my-2`} />
             <button
               onClick={toggleTheme}
               className={`border-2 p-1 rounded bg-gray-500 bg-opacity-20 ${isDarkMode
